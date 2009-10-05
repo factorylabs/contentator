@@ -1,0 +1,14 @@
+- content_for :smart_navigation do
+  = link_to 'New page', new_cms_admin_page_path
+ 
+%h1 Site Pages
+ 
+%table.box
+  %tr
+    %th Name
+    %th &nbsp;
+ 
+    %tr
+      %td
+        = sortable_tree @pages, 'page'
+        = sortable_element 'tree_root', { :tree => true, :url => update_page_tree_cms_admin_pages_path, :overlap => :vertical, :handle => 'move' }

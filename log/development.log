@@ -1,0 +1,993 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (30.7ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mDROP DATABASE IF EXISTS `contentator_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `contentator_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (121.8ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (19.4ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (20.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2009-10-02 10:15:58) [GET]
+  Parameters: {"path"=>[]}
+
+NameError (uninitialized constant ContentController):
+  
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-02 10:43:25) [GET]
+  Parameters: {"path"=>[]}
+
+ActionView::MissingTemplate (Missing template cms/content/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-02 10:55:57) [GET]
+  Parameters: {"path"=>[]}
+
+ActionView::MissingTemplate (Missing template cms/content/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20091002165818)
+  [4;35;1mSQL (86.2ms)[0m   [0mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(100), `subtitle` varchar(100), `slug` varchar(100), `path` varchar(255), `template_name` varchar(255), `position` int(11), `parent_id` int(11), `visible` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091002165818')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (74.3ms)[0m   [0;1mDROP DATABASE IF EXISTS `contentator_test`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE DATABASE `contentator_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (34.7ms)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(100), `subtitle` varchar(100), `slug` varchar(100), `path` varchar(255), `template_name` varchar(255), `position` int(11), `parent_id` int(11), `visible` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (59.3ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002165818')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-02 12:58:36) [GET]
+  Parameters: {"path"=>[]}
+
+ActionView::MissingTemplate (Missing template cms/content/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20091002165818)
+  [4;35;1mSQL (19.7ms)[0m   [0mDROP TABLE `pages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20091002165818'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20091002165818)
+  [4;35;1mSQL (50.3ms)[0m   [0mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(100), `subtitle` varchar(100), `slug` varchar(100), `path` varchar(255), `template_name` varchar(255), `position` int(11), `parent_id` int(11), `visible` tinyint(1), `in_navigation` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091002165818')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (88.8ms)[0m   [0;1mDROP DATABASE IF EXISTS `contentator_test`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE DATABASE `contentator_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (39.2ms)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(100), `subtitle` varchar(100), `slug` varchar(100), `path` varchar(255), `template_name` varchar(255), `position` int(11), `parent_id` int(11), `visible` tinyint(1), `in_navigation` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (92.2ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002165818')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePages (20091002165818)
+Migrating to CreateHomePage (20091002211930)
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO `pages` (id,title,template_name,slug,position,visible) VALUES (1,'Home', 'home','home',1,1)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091002211930')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (111.5ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mDROP DATABASE IF EXISTS `contentator_test`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE DATABASE `contentator_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (60.2ms)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(100), `subtitle` varchar(100), `slug` varchar(100), `path` varchar(255), `template_name` varchar(255), `position` int(11), `parent_id` int(11), `visible` tinyint(1), `in_navigation` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (67.1ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002211930')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091002165818')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 10:10:39) [GET]
+  Parameters: {"path"=>[]}
+
+ActionView::MissingTemplate (Missing template cms/content/show.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (48.7ms)[0m   [0;1mDROP DATABASE IF EXISTS `contentator_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `contentator_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (30.3ms)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(100), `subtitle` varchar(100), `slug` varchar(100), `path` varchar(255), `template_name` varchar(255), `position` int(11), `parent_id` int(11), `visible` tinyint(1), `in_navigation` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (8.8ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (56.4ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002211930')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091002165818')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 12:11:56) [GET]
+  Parameters: {"path"=>[]}
+  [4;35;1mPage Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering cms/content/home
+Completed in 37ms (View: 6, DB: 3) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 14:55:43) [GET]
+  Parameters: {"path"=>["steve"]}
+  [4;36;1mPage Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`path` = 'steve') LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+
+ActionView::MissingTemplate (Missing template cms/content/404.erb in view path app/views):
+  app/controllers/cms/content_controller.rb:7:in `show'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 14:56:59) [GET]
+  Parameters: {"path"=>["steve"]}
+  [4;36;1mPage Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`path` = 'steve') LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering cms/content/404 (404)
+Completed in 22ms (View: 9, DB: 4) | 404 Not Found [http://localhost/steve]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 14:57:44) [GET]
+  Parameters: {"path"=>["steve"]}
+  [4;36;1mPage Columns (5.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (1.4ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`path` = 'steve') LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering public/404 (404)
+
+ActionView::MissingTemplate (Missing template public/404.erb in view path app/views):
+  app/controllers/cms/content_controller.rb:7:in `show'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 14:57:54) [GET]
+  Parameters: {"path"=>["steve"]}
+  [4;36;1mPage Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`path` = 'steve') LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering /public/404 (404)
+
+ActionView::MissingTemplate (Missing template /public/404.erb in view path app/views):
+  app/controllers/cms/content_controller.rb:7:in `show'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 15:08:49) [GET]
+  Parameters: {"path"=>["steve"]}
+  [4;36;1mPage Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (1.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`path` = 'steve') LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering 404 (404)
+
+ActionView::MissingTemplate (Missing template 404.erb in view path app/views):
+  app/controllers/cms/content_controller.rb:7:in `show'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 15:09:15) [GET]
+  Parameters: {"path"=>["steve"]}
+  [4;36;1mPage Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`path` = 'steve') LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering content/404 (404)
+
+ActionView::MissingTemplate (Missing template content/404.erb in view path app/views):
+  app/controllers/cms/content_controller.rb:7:in `show'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 15:09:39) [GET]
+  Parameters: {"path"=>["steve"]}
+  [4;36;1mPage Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (1.7ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`path` = 'steve') LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering cms/content/404 (404)
+Completed in 22ms (View: 9, DB: 5) | 404 Not Found [http://localhost/steve]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::ContentController#show (for 127.0.0.1 at 2009-10-05 15:19:21) [GET]
+  Parameters: {"path"=>[]}
+  [4;36;1mPage Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+Rendering cms/content/home
+Completed in 16ms (View: 1, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-05 15:19:28) [GET]
+
+NameError (uninitialized constant Admin):
+  
+
+Rendered rescues/_trace (34.9ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-10-05 15:54:17) [GET]
+
+NameError (uninitialized constant Admin):
+  
+
+Rendered rescues/_trace (29.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-05 16:16:36) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` [0m
+
+ActionView::MissingTemplate (Missing template cms/admin/pages/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2009-10-05 16:43:40) [GET]
+
+NameError (uninitialized constant Admin):
+  app/helpers/cms/admin/pages_helper.rb:1
+  app/controllers/application_controller.rb:5
+  app/controllers/cms/admin/admin_controller.rb:1
+  app/controllers/cms/admin/pages_controller.rb:1
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Mon Oct 05 16:50:09 -0600 2009
+  Status: 500 Internal Server Error
+  Expected /Users/craigpartin/Gems/contentator/app/helpers/cms/admin/pages_helper.rb to define Cms::Admin::PagesHelper
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:426:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:361:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:137:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/Gems/contentator/app/controllers/application_controller.rb:5
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Oct 05 16:50:11 -0600 2009
+  Status: 500 Internal Server Error
+  Expected /Users/craigpartin/Gems/contentator/app/helpers/cms/admin/pages_helper.rb to define Cms::Admin::PagesHelper
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:426:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:361:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:137:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/Gems/contentator/app/controllers/application_controller.rb:5
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Oct 05 16:52:15 -0600 2009
+  Status: 500 Internal Server Error
+  Expected /Users/craigpartin/Gems/contentator/app/helpers/cms/admin/pages_helper.rb to define Cms::Admin::PagesHelper
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:426:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:361:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:137:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/Gems/contentator/app/controllers/application_controller.rb:5
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Oct 05 16:52:17 -0600 2009
+  Status: 500 Internal Server Error
+  Expected /Users/craigpartin/Gems/contentator/app/helpers/cms/admin/pages_helper.rb to define Cms::Admin::PagesHelper
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:426:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:361:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:137:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/Gems/contentator/app/controllers/application_controller.rb:5
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Oct 05 16:53:30 -0600 2009
+  Status: 500 Internal Server Error
+  Expected /Users/craigpartin/Gems/contentator/app/helpers/cms/admin/pages_helper.rb to define Cms::Admin::PagesHelper
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:426:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:361:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:137:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/Gems/contentator/app/controllers/application_controller.rb:5
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Oct 05 16:54:02 -0600 2009
+  Status: 500 Internal Server Error
+  Expected /Users/craigpartin/Gems/contentator/app/helpers/cms/admin/pages_helper.rb to define Cms::Admin::PagesHelper
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:426:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:361:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:137:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/Gems/contentator/app/controllers/application_controller.rb:5
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Mon Oct 05 16:54:35 -0600 2009
+  Status: 500 Internal Server Error
+  Expected /Users/craigpartin/Gems/contentator/app/helpers/cms/admin/pages_helper.rb to define Cms::Admin::PagesHelper
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:426:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:361:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/inflector.rb:360:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:137:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:120:in `helper'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/helpers.rb:115:in `helper'
+    /Users/craigpartin/Gems/contentator/app/controllers/application_controller.rb:5
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:380:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:379:in `load_file'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:80:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activesupport-2.3.3/lib/active_support/dependencies.rb:92:in `const_missing'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:111:in `_call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/query_cache.rb:28:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/activerecord-2.3.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/reloader.rb:29:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/actionpack-2.3.3/lib/action_controller/dispatcher.rb:106:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/static.rb:31:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:46:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `each'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/urlmap.rb:40:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/content_length.rb:13:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/chunked.rb:15:in `call'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:61:in `process'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/handler/mongrel.rb:34:in `run'
+    /Users/craigpartin/.gem/ruby/1.8/gems/rails-2.3.3/lib/commands/server.rb:111
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-05 17:01:35) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+
+ActionView::TemplateError (undefined method `edit_admin_page_path' for #<ActionView::Base:0x5d677c>) on line #21 of app/views/cms/admin/pages/index.html.haml:
+18:  
+19:       / %td.list_controls
+20:       / = link_to image_tag('icons/edit.png'), edit_admin_page_path(page)
+21:       / = link_to image_tag('icons/delete.png'), [:admin, page], :confirm => 'Are you sure?', :method => :delete
+22:  
+23: / = will_paginate @page
+24:  
+
+    app/helpers/cms/admin/pages_helper.rb:7:in `send'
+    app/helpers/cms/admin/pages_helper.rb:7:in `sortable_tree'
+    app/helpers/cms/admin/pages_helper.rb:20:in `make_tree_recursive'
+    app/helpers/cms/admin/pages_helper.rb:17:in `each'
+    app/helpers/cms/admin/pages_helper.rb:17:in `make_tree_recursive'
+    app/helpers/cms/admin/pages_helper.rb:4:in `sortable_tree'
+    app/views/cms/admin/pages/index.html.haml:21:in `_run_haml_app47views47cms47admin47pages47index46html46haml'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (49.3ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-05 17:02:26) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` [0m
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;35;1mPage Columns (3.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+
+ActionView::TemplateError (undefined method `edit_admin_page_path' for #<ActionView::Base:0x21575f0>) on line #21 of app/views/cms/admin/pages/index.html.haml:
+18:  
+19:       / %td.list_controls
+20:       / = link_to image_tag('icons/edit.png'), edit_cms_admin_page_path(page)
+21:       / = link_to image_tag('icons/delete.png'), [:admin, page], :confirm => 'Are you sure?', :method => :delete
+22:  
+23: / = will_paginate @page
+24:  
+
+    app/helpers/cms/admin/pages_helper.rb:7:in `send'
+    app/helpers/cms/admin/pages_helper.rb:7:in `sortable_tree'
+    app/helpers/cms/admin/pages_helper.rb:20:in `make_tree_recursive'
+    app/helpers/cms/admin/pages_helper.rb:17:in `each'
+    app/helpers/cms/admin/pages_helper.rb:17:in `make_tree_recursive'
+    app/helpers/cms/admin/pages_helper.rb:4:in `sortable_tree'
+    app/views/cms/admin/pages/index.html.haml:21:in `_run_haml_app47views47cms47admin47pages47index46html46haml'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (130.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-05 17:04:25) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+
+ActionView::TemplateError (undefined method `edit_admin_page_path' for #<ActionView::Base:0x24087f4>) on line #15 of app/views/cms/admin/pages/index.html.haml:
+12:  
+13:     %tr
+14:       %td
+15:         = sortable_tree @pages, 'page'
+16:         = sortable_element 'tree_root', { :tree => true, :url => update_page_tree_admin_pages_path, :overlap => :vertical, :handle => 'move' }
+
+    app/helpers/cms/admin/pages_helper.rb:7:in `send'
+    app/helpers/cms/admin/pages_helper.rb:7:in `sortable_tree'
+    app/helpers/cms/admin/pages_helper.rb:20:in `make_tree_recursive'
+    app/helpers/cms/admin/pages_helper.rb:17:in `each'
+    app/helpers/cms/admin/pages_helper.rb:17:in `make_tree_recursive'
+    app/helpers/cms/admin/pages_helper.rb:4:in `sortable_tree'
+    app/views/cms/admin/pages/index.html.haml:15:in `_run_haml_app47views47cms47admin47pages47index46html46haml'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (47.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-05 17:14:41) [GET]
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` [0m
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;35;1mPage Columns (4.8ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+
+ActionView::TemplateError (undefined method `edit_admin_page_path' for #<ActionView::Base:0x20ec480>) on line #15 of app/views/cms/admin/pages/index.html.haml:
+12:  
+13:     %tr
+14:       %td
+15:         = sortable_tree @pages, 'page'
+16:         = sortable_element 'tree_root', { :tree => true, :url => update_page_tree_admin_pages_path, :overlap => :vertical, :handle => 'move' }
+
+    app/helpers/cms/admin/pages_helper.rb:7:in `send'
+    app/helpers/cms/admin/pages_helper.rb:7:in `sortable_tree'
+    app/helpers/cms/admin/pages_helper.rb:20:in `make_tree_recursive'
+    app/helpers/cms/admin/pages_helper.rb:17:in `each'
+    app/helpers/cms/admin/pages_helper.rb:17:in `make_tree_recursive'
+    app/helpers/cms/admin/pages_helper.rb:4:in `sortable_tree'
+    app/views/cms/admin/pages/index.html.haml:15:in `_run_haml_app47views47cms47admin47pages47index46html46haml'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (50.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-05 17:15:33) [GET]
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Columns (3.5ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+
+ActionView::TemplateError (undefined local variable or method `update_page_tree_admin_pages_path' for #<ActionView::Base:0x2302b70>) on line #14 of app/views/cms/admin/pages/index.html.haml:
+11:     %tr
+12:       %td
+13:         = sortable_tree @pages, 'page'
+14:         = sortable_element 'tree_root', { :tree => true, :url => update_page_tree_admin_pages_path, :overlap => :vertical, :handle => 'move' }
+
+    app/views/cms/admin/pages/index.html.haml:14:in `_run_haml_app47views47cms47admin47pages47index46html46haml'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.6) rails/./lib/sass/plugin/rails.rb:19:in `process'
+
+Rendered rescues/_trace (44.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-05 17:16:42) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+Completed in 21ms (View: 11, DB: 4) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-05 17:23:56) [GET]
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+Completed in 20ms (View: 7, DB: 3) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-05 17:24:50) [GET]
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` [0m
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Columns (3.6ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+Completed in 23ms (View: 11, DB: 5) | 200 OK [http://localhost/admin]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (39.9ms)[0m   [0;1mDROP DATABASE IF EXISTS `contentator_test`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE DATABASE `contentator_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (52.9ms)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(100), `subtitle` varchar(100), `slug` varchar(100), `path` varchar(255), `template_name` varchar(255), `position` int(11), `parent_id` int(11), `visible` tinyint(1), `in_navigation` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (34.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002211930')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091002165818')[0m
