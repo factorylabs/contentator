@@ -8,5 +8,3 @@ db/schema.rb
 *.ipr
 *.iws
 tmp/restart.txt
-public/export
-test/export
