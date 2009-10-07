@@ -4,9 +4,9 @@ class PageTest < ActiveSupport::TestCase
 
   # Setup
   def setup
-    @home_page = Factory(:page, :id => 1, :slug => 'home', :path => 'home')
+    @home_page = Factory(:page, :id => 1, :slug => 'home', :path => 'home', :template_name => 'home', :parent_id => nil)
     @page = Factory(:page)
-    @child = Factory(:page, :title => 'Child', :parent_id => @page.id)
+    @child = Factory(:page, :title => 'Child', :parent_id => @page.id, :visible => false)
   end
   subject { @page }  
   
@@ -29,9 +29,6 @@ class PageTest < ActiveSupport::TestCase
   # Validations
   should_validate_presence_of :title
     
-  # Factories
-  # should_have_valid_factory :page
-
   should "find home page" do 
     home = Page.home_page
     assert_equal 1, home.id
@@ -39,13 +36,13 @@ class PageTest < ActiveSupport::TestCase
   end
   
   should "find a page with a path" do
-    test_page, is_404 = Page.find_from_path(@page.path.split('/'))
+    test_page = Page.find_from_path(@page.path.split('/'))
     assert_equal @page, test_page
   end
 
-  should "return home page, 404 if path not found" do
-    page, is_404 = Page.find_from_path(['a', 'nonexistant', 'path'])
-    assert is_404
+  should "return nil if path not found" do
+    page = Page.find_from_path(['a', 'nonexistant', 'path'])
+    deny page
   end
 
   should "not destroy if children" do 
@@ -54,9 +51,30 @@ class PageTest < ActiveSupport::TestCase
     assert @page.errors.on_base.include?('Cannot delete page with children. Please delete children first.')
   end
 
+  should "not destroy if home page" do 
+    @home_page.destroy
+    assert @home_page
+    assert @home_page.errors.on_base.include?('Cannot delete home page.')
+  end
+
   should "have parent slug in path" do
     new_page = Page.create(:title => 'new page', :parent_id => @page.id)
     assert_equal "#{@page.path}/#{new_page.slug}", new_page.path
+  end
+
+  should "have templates constant of type array" do
+    assert_equal Array, Page::TEMPLATES.class
+    assert Page::TEMPLATES.length > 0
+  end
+  
+  should "show visible" do
+    assert_equal [@home_page, @page], Page.visible.all
+  end
+
+  should "not allow parent_id to be null" do
+    @page.parent_id = nil
+    @page.save
+    deny @page.reload.parent_id.nil?
   end
   
   # should "update children path" do

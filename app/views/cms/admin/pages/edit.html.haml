@@ -1,0 +1,10 @@
+%h1 New Page
+
+- form_for([:cms, :admin, @page]) do |f| 
+  = render :partial => 'form', :locals => { :f => f, :button => 'Update' } 
+
+- content_for :smart_navigation do
+  = link_to 'Back', cms_admin_pages_path 
+
+
+

@@ -2,9 +2,15 @@ module Cms::Admin::PagesHelper
  
   def sortable_tree(collection, model)
     make_tree_recursive(collection) do |item|
-                
+      controls = %{
+        #{link_to('', send("edit_cms_admin_#{model}_path", item), {:class => 'edit'} )} 
+        #{link_to('', send("cms_admin_#{model}_path", item), {:method => :delete, :confirm => 'Are you sure you want to delete this item?', :class => 'delete'})}
+      }
+      toggle = item.children.empty? ? '<span class="spacer">&nbsp;</span>': link_to_function(image_tag('icons/folder.png'), "$(this).next('ul').toggle()")
+
       buffer = <<-"end;"
-        <span class="tree-controls">#{link_to('edit', send("edit_cms_admin_#{model}_path", item), {:class => 'edit'} )}<a class="move">move</a></span>
+        #{toggle}
+        <span class="tree-controls">#{controls}<a class="move">move</a></span>
         <span>#{item.title} (/#{item.path})</span>
       end;
  
@@ -12,7 +18,6 @@ module Cms::Admin::PagesHelper
   end
  
   def make_tree_recursive(tree, parent_id=nil, nested=false)
-    
     ret = "<ul id=\"tree_#{parent_id || 'root'}\" class=\"#{parent_id ? '' : 'tree'}\">"
     tree.each do |node|
       if node.parent_id == parent_id

@@ -1,15 +1,18 @@
 class Cms::ContentController < ApplicationController 
 
   def show
-    @page, @is_404 = Page.find_from_path(params[:path])
+    @page = Page.find_from_path(params[:path])
 
-    if @is_404
-      render :action => '404', :layout => true, :status => 404
-    else
+    if @page
       render :action => @page.template_name if @page
+    else
+      respond_to do |format|
+        format.all { render :file => "#{RAILS_ROOT}/public/404.html", :status => 404  }
+      end
     end
   end
   
+  private
   def home
   end
 

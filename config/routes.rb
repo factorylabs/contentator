@@ -1,6 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
 
-
   map.namespace :cms do |cms|
     cms.resources :page_content_blocks, :collection => [:sort]
     cms.namespace :admin, :path_prefix => '' do |admin|

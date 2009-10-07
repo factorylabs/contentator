@@ -23,15 +23,14 @@ class Cms::ContentControllerTest < ActionController::TestCase
     should_render_template :content
   end
 
-  context 'GET 404' do
+  context 'GET show (404)' do
     setup { get :show, :path => ['nonexistant', 'path']}
     should_respond_with :missing
     should_not_set_the_flash
-    should("assign to @is_404") { assert_equal assigns(:is_404), true }
-    should_render_template '404'
+    should_render_template "#{RAILS_ROOT}/public/404.html"
   end
   
-  context 'GET home' do
+  context 'GET show (home)' do
     setup do
       get :show, :path => [@home_page.path]
     end

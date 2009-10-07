@@ -1,4 +1,43 @@
-%H1 Admin
-
-= yield
-
+!!!
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title Administration
+    %meta{ :content => "text/html; charset=UTF-8", "http-equiv" => "content-type" }
+    %meta{ :content => "en", "http-equiv" => "content-language" }
+    %meta{ :content => "no", "http-equiv" => "imagetoolbar" }
+    = stylesheet_link_tag 'admin_standard'
+    = javascript_include_tag :defaults#, 'admin/application', 'admin/interface'
+  %body
+    #body
+      #body_wrapper
+        #logo<
+          / %img{ :src => "/images/admin_standard/logo.png" }
+          #utility
+            #settings
+              %span= "Welcome #{@current_user.nil? ? '' : @current_user.login} -"
+              = link_to 'Logout', '/logout'
+        #body_container
+          #context_wrapper
+            #context_container
+              / - @content_for_subnavigation = tabbed_subnavigation_for :admin, :title => 'Management'
+              / - if @content_for_context_navigation || @content_for_subnavigation
+              /   #subnavigation
+              /     .content= yield :subnavigation
+              /     - if @content_for_context_navigation
+              /       #context
+              /         #context_arrow
+              /         = yield :context_navigation
+              /   #context_container_end
+          #content_container
+            / - if logged_in?
+            / = tabbed_navigation :admin
+            #content_shadow_right
+              .content
+                / - if logged_in?
+                / = breadcrumbs ['Admin', '/admin'], @current_crumb || nil
+                #smart_navigation= yield :smart_navigation
+                #controller_content
+                  = flash_messages
+                  ~ yield
+                .clear-right <br clear="all"/>
+            #footer= "Copyright &copy; #{Time.now.strftime('%Y')}"

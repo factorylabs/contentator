@@ -1,0 +1,18 @@
+= f.error_messages
+
+= f.label :visible
+= f.check_box :visible
+
+= f.label :title
+= f.text_field :title
+
+= f.label :subtitle
+= f.text_field :subtitle
+
+= f.label :parent 
+= f.collection_select(:parent_id, @pages, :id, :title)
+
+= f.label :template 
+= f.select :template_name, Page::TEMPLATES
+
+= f.submit button
