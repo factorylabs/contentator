@@ -1,0 +1,12 @@
+.DS_Store
+config/database.yml
+tmp/**/*
+log/*
+.idea/*
+db/schema.rb
+*.iml
+*.ipr
+*.iws
+tmp/restart.txt
+public/export
+test/export

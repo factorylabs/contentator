@@ -14931,3 +14931,222 @@ Completed in 38ms (View: 16, DB: 5) | 200 OK [http://localhost/admin/pages]
   [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
   [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002211930')[0m
   [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091002165818')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#update_page_tree (for 127.0.0.1 at 2009-10-07 16:05:20) [POST]
+  Parameters: {"authenticity_token"=>"tv9lGs40yF2czhWpz/z83ILKhADYLgO6jPUNLYFlMPM=", "tree_root"=>{"0"=>{"id"=>"5", "0"=>{"id"=>"6"}, "1"=>{"id"=>"7"}}, "1"=>{"id"=>"1", "0"=>{"0"=>{"id"=>"3"}, "id"=>"2", "1"=>{"id"=>"4"}}, "1"=>{"id"=>"8"}}}}
+  [4;36;1mPage Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (1.4ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (1.5ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl' AND `pages`.parent_id IS NULL AND `pages`.id <> 5) LIMIT 1[0m
+  [4;36;1mPage Update (0.4ms)[0m   [0;1mUPDATE `pages` SET `position` = 1, `updated_at` = '2009-10-07 22:05:20' WHERE `id` = 5[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 6) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl-1' AND `pages`.parent_id = 5 AND `pages`.id <> 6) LIMIT 1[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl' AND `pages`.parent_id = 1 AND `pages`.id <> 5) LIMIT 1[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;36;1mPage Update (0.2ms)[0m   [0;1mUPDATE `pages` SET `position` = 2, `updated_at` = '2009-10-07 22:05:20' WHERE `id` = 6[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 7) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl-2' AND `pages`.parent_id = 5 AND `pages`.id <> 7) LIMIT 1[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl' AND `pages`.parent_id = 1 AND `pages`.id <> 5) LIMIT 1[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;36;1mPage Update (0.2ms)[0m   [0;1mUPDATE `pages` SET `position` = 3, `updated_at` = '2009-10-07 22:05:20' WHERE `id` = 7[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;35;1mPage Update (0.2ms)[0m   [0mUPDATE `pages` SET `position` = 2, `updated_at` = '2009-10-07 22:05:20' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test' AND `pages`.parent_id = 1 AND `pages`.id <> 2) LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Update (0.3ms)[0m   [0mUPDATE `pages` SET `position` = 3, `updated_at` = '2009-10-07 22:05:20' WHERE `id` = 2[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test2' AND `pages`.parent_id = 2 AND `pages`.id <> 3) LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test' AND `pages`.parent_id = 1 AND `pages`.id <> 2) LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;35;1mPage Update (0.5ms)[0m   [0mUPDATE `pages` SET `position` = 4, `updated_at` = '2009-10-07 22:05:20' WHERE `id` = 3[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'tst3' AND `pages`.parent_id = 2 AND `pages`.id <> 4) LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test' AND `pages`.parent_id = 1 AND `pages`.id <> 2) LIMIT 1[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;35;1mPage Update (0.2ms)[0m   [0mUPDATE `pages` SET `position` = 5, `updated_at` = '2009-10-07 22:05:20' WHERE `id` = 4[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPage Load (0.2ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 8) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'fff' AND `pages`.parent_id = 1 AND `pages`.id <> 8) LIMIT 1[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Update (0.2ms)[0m   [0mUPDATE `pages` SET `position` = 6, `updated_at` = '2009-10-07 22:05:20' WHERE `id` = 8[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Completed in 92ms (View: 1, DB: 24) | 200 OK [http://localhost/admin/pages/update_page_tree]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-07 16:05:22) [GET]
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Completed in 33ms (View: 19, DB: 6) | 200 OK [http://localhost/admin/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#update_page_tree (for 127.0.0.1 at 2009-10-07 16:05:51) [POST]
+  Parameters: {"authenticity_token"=>"tv9lGs40yF2czhWpz/z83ILKhADYLgO6jPUNLYFlMPM=", "tree_root"=>{"0"=>{"id"=>"5", "0"=>{"id"=>"6"}, "1"=>{"id"=>"7"}}, "1"=>{"id"=>"1", "0"=>{"0"=>{"id"=>"3"}, "id"=>"2", "1"=>{"id"=>"4"}}, "1"=>{"id"=>"8"}}}}
+  [4;36;1mPage Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mPage Load (10.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl' AND `pages`.parent_id IS NULL AND `pages`.id <> 5) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 6) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl-1' AND `pages`.parent_id = 5 AND `pages`.id <> 6) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl' AND `pages`.parent_id = 1 AND `pages`.id <> 5) LIMIT 1[0m
+  [4;36;1mPage Load (0.4ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mPage Load (0.3ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mPage Load (0.2ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 7) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl-2' AND `pages`.parent_id = 5 AND `pages`.id <> 7) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test-tl' AND `pages`.parent_id = 1 AND `pages`.id <> 5) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 5) [0m
+  [4;36;1mSQL (8.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.6ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test' AND `pages`.parent_id = 1 AND `pages`.id <> 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (5.3ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test2' AND `pages`.parent_id = 2 AND `pages`.id <> 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test' AND `pages`.parent_id = 1 AND `pages`.id <> 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPage Load (0.4ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 4) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPage Load (0.5ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'tst3' AND `pages`.parent_id = 2 AND `pages`.id <> 4) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'test' AND `pages`.parent_id = 1 AND `pages`.id <> 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 2) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT * FROM `pages` WHERE (`pages`.`id` = 8) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPage Load (0.3ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'fff' AND `pages`.parent_id = 1 AND `pages`.id <> 8) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT `pages`.id FROM `pages` WHERE (`pages`.`slug` = BINARY 'home' AND `pages`.parent_id IS NULL AND `pages`.id <> 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `pages` WHERE (`pages`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/pages
+Completed in 160ms (DB: 34) | 302 Found [http://localhost/admin/pages/update_page_tree]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-07 16:05:51) [GET]
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (9.2ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Completed in 139ms (View: 120, DB: 12) | 200 OK [http://localhost/admin/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-07 16:06:02) [GET]
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Load (0.5ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Completed in 47ms (View: 28, DB: 10) | 200 OK [http://localhost/admin/pages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing Cms::Admin::PagesController#index (for 127.0.0.1 at 2009-10-07 16:08:33) [GET]
+Rendering template within layouts/cms/admin/application
+Rendering cms/admin/pages/index
+  [4;36;1mPage Load (0.6ms)[0m   [0;1mSELECT * FROM `pages` ORDER BY position[0m
+  [4;35;1mPage Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 5) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 6) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 7) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 3) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 4) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `pages` WHERE (`pages`.parent_id = 8) [0m
+Completed in 45ms (View: 30, DB: 6) | 200 OK [http://localhost/admin/pages]
