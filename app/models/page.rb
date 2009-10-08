@@ -3,10 +3,11 @@ class Page < ActiveRecord::Base
 
   acts_as_tree :order => 'position'
   has_permalink :title, :slug, :scope => :parent_id
+  
+  has_many :page_content_blocks
 
   validates_presence_of :title
   validates_length_of :title, :within => 1..255, :message => 'must have a length between 1 and 255 characters'
-            
   validates_presence_of :slug
   validates_uniqueness_of :slug, :scope => :parent_id, :message => 'must be unique, slug already taken'   
   validates_length_of :slug, :within => 1..255, :message => 'must have a length between 1 and 255 characters'       

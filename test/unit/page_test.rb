@@ -4,7 +4,8 @@ class PageTest < ActiveSupport::TestCase
 
   # Setup
   def setup
-    @home_page = Factory(:page, :id => 1, :slug => 'home', :path => 'home', :template_name => 'home', :parent_id => nil)
+    @home_page = Factory(:page, :slug => 'home', :path => 'home', :template_name => 'home', :parent_id => nil)
+    Page.stubs(:home_page).returns(@home_page)
     @page = Factory(:page)
     @child = Factory(:page, :title => 'Child', :parent_id => @page.id, :visible => false)
   end
@@ -24,14 +25,13 @@ class PageTest < ActiveSupport::TestCase
   should_have_db_column :updated_at,    :type => :datetime
   
   # Relationships
-  # should_have_many :page_content_blocks
+  should_have_many :page_content_blocks
   
   # Validations
   should_validate_presence_of :title
     
   should "find home page" do 
     home = Page.home_page
-    assert_equal 1, home.id
     assert_equal 'home', home.slug
   end
   
@@ -39,29 +39,28 @@ class PageTest < ActiveSupport::TestCase
     test_page = Page.find_from_path(@page.path.split('/'))
     assert_equal @page, test_page
   end
-
+  
   should "return nil if path not found" do
     page = Page.find_from_path(['a', 'nonexistant', 'path'])
     deny page
   end
-
+  
   should "not destroy if children" do 
     @page.destroy
     assert @page
     assert @page.errors.on_base.include?('Cannot delete page with children. Please delete children first.')
   end
-
+  
   should "not destroy if home page" do 
     @home_page.destroy
     assert @home_page
     assert @home_page.errors.on_base.include?('Cannot delete home page.')
   end
-
+  
   should "have parent slug in path" do
-    new_page = Page.create(:title => 'new page', :parent_id => @page.id)
-    assert_equal "#{@page.path}/#{new_page.slug}", new_page.path
+    assert_equal "#{@page.path}/#{@child.slug}", @child.path
   end
-
+  
   should "have templates constant of type array" do
     assert_equal Array, Page::TEMPLATES.class
     assert Page::TEMPLATES.length > 0
@@ -70,13 +69,13 @@ class PageTest < ActiveSupport::TestCase
   should "show visible" do
     assert_equal [@home_page, @page], Page.visible.all
   end
-
+  
   should "not allow parent_id to be null" do
     @page.parent_id = nil
     @page.save
     deny @page.reload.parent_id.nil?
   end
-  
+   
   # should "update children path" do
   #   new_page = Page.create(:title => 'new page', :parent_id => @page.id)
   #   assert_equal "#{@page.path}/#{new_page.slug}", new_page.path
