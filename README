@@ -2,3 +2,4 @@ plugins
   paperclip
   acts_as_tree
   permalink_fu
+  kete-tinymce

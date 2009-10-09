@@ -23,7 +23,8 @@ class PageContentBlockTest < ActiveSupport::TestCase
   should_have_db_column :updated_at,          :type => :datetime
   
   # Relationships
-  
+  should_belong_to :pages
+
   # Validations
     
 end

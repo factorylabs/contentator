@@ -1,0 +1,19 @@
+= tiny_mce_init 
+
+.form_container
+  = link_to image_tag('icons/cancel.png'), content_path(@page.path), :id => 'cancel_button'
+
+  - form_for([:cms, :admin, @page_content_block], :html => {:multipart => true }) do |f|
+    = f.label :title
+    = f.text_field :title
+
+    = f.label :text
+    = f.text_area :text, :class => "mceEditor"
+
+    = f.label 'File upload'
+    = f.file_field :photo
+
+    = label @page_content_block, "remove file"
+    = check_box_tag 'remove_image'
+
+    = submit_tag "Update" 
