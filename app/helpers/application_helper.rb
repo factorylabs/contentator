@@ -10,4 +10,19 @@ module ApplicationHelper
     end
     messages.blank? ? '' : content_tag(:div, messages, :class => 'flash-messages', :id => 'flash_messages')
   end
+
+  def edit_link(update, url)
+    return unless current_user
+    link_to_remote(image_tag('icons/edit.png', :class => 'edit_button'), :update => update, :url =>  url, :method => :get)
+  end
+
+  def delete_link(update, url)
+    return unless current_user
+    link_to_remote(image_tag('icons/delete.png', :class => 'delete_button'), :update => update, :url =>  url, :method => :delete, :confirm => 'Are you sure you want to delete this item?')
+  end
+  
+  def sort_field(id, pos)
+    text_field_tag "page_content_blocks[#{id}]", pos, :class => 'position_text_box'
+  end
+
 end

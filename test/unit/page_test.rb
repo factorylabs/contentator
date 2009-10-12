@@ -4,10 +4,10 @@ class PageTest < ActiveSupport::TestCase
 
   # Setup
   def setup
-    @home_page = Factory(:page, :slug => 'home', :path => 'home', :template_name => 'home', :parent_id => nil)
+    @home_page = Factory(:page, :slug => 'home', :path => 'home', :template_name => 'home', :parent_id => nil, :position => 34)
     Page.stubs(:home_page).returns(@home_page)
     @page = Factory(:page)
-    @child = Factory(:page, :title => 'Child', :parent_id => @page.id, :visible => false)
+    @child = Factory(:page, :title => 'Child', :parent_id => @page.id, :visible => false, :position => 16)
   end
   subject { @page }  
   
@@ -30,6 +30,10 @@ class PageTest < ActiveSupport::TestCase
   # Validations
   should_validate_presence_of :title
     
+  should "act_as_tree" do
+    assert_equal [@child], @page.children
+  end
+
   should "find home page" do 
     home = Page.home_page
     assert_equal 'home', home.slug
@@ -69,6 +73,10 @@ class PageTest < ActiveSupport::TestCase
   should "show visible" do
     assert_equal [@home_page, @page], Page.visible.all
   end
+
+  should "be ordered" do
+    assert_equal [@child, @page, @home_page], Page.ordered.all
+  end
   
   should "not allow parent_id to be null" do
     @page.parent_id = nil
@@ -76,13 +84,4 @@ class PageTest < ActiveSupport::TestCase
     deny @page.reload.parent_id.nil?
   end
    
-  # should "update children path" do
-  #   new_page = Page.create(:title => 'new page', :parent_id => @page.id)
-  #   assert_equal "#{@page.path}/#{new_page.slug}", new_page.path
-  # 
-  #   @page.title = 'new parent'
-  #   @page.save
-  #   assert_equal "new-parent/#{new_page.slug}", new_page.path
-  # end
-  
 end

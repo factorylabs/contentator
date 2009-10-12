@@ -7,4 +7,18 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+
+  uses_tiny_mce :options => { 
+    :width => 400,
+    :theme => 'advanced',
+    :theme_advanced_disable => "anchor,blockquote,outdent,indent,image,cleanup,help,code,separator,hr,quote,removeformat,formatselect,fontselect,fontsizeselect,styleselect,sub, sup,forecolor,backcolor,forecolorpicker,backcolorpicker,charmap,visualaid"
+  }
+  
+  helper_method :current_user
+
+  private
+  def current_user
+    return true
+  end  
+
 end

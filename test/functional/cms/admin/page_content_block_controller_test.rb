@@ -80,7 +80,7 @@ class Cms::Admin::PageContentBlocksControllerTest < ActionController::TestCase
   
     context "on POST to :create" do
       setup do
-        post :create, :page_content_block => Factory.attributes_for(:page_content_block), :page_id => @page.id
+        post :create, :page_content_block => Factory.attributes_for(:page_content_block, :page_id => @page.id)
       end
   
       should_not_change('the number of page_content_blocks') {PageContentBlock.count}

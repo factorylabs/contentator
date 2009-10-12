@@ -1,0 +1,7 @@
+- form_tag sort_cms_admin_page_content_blocks_path, :id => 'sort_form', :onsubmit => 'getPcbInputs();' do
+  = submit_tag "Sort"
+  = hidden_field_tag :page_id, @page.id
+  %br 
+
+- @page.page_content_blocks.each do |page_content_block|
+  = render :partial => 'cms/content/page_content_block', :locals => {:page_content_block => page_content_block}

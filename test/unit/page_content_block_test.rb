@@ -6,7 +6,8 @@ class PageContentBlockTest < ActiveSupport::TestCase
   def setup
     @page_content_block = Factory(:page_content_block)
     @page = Page.find(@page_content_block.page_id)
-    @page_content_block2 = Factory(:page_content_block, :position => 2)
+    @page_content_block2 = Factory(:page_content_block, :page_id => @page.id, :position => 2)
+    @page_content_block3 = Factory(:page_content_block, :page_id => @page.id, :position => 3, :visible => false)
   end
   subject { @page_content_block }  
   
@@ -23,8 +24,16 @@ class PageContentBlockTest < ActiveSupport::TestCase
   should_have_db_column :updated_at,          :type => :datetime
   
   # Relationships
-  should_belong_to :pages
+  should_belong_to :page
 
   # Validations
-    
+   
+  should "show visible" do
+    assert_equal [@page_content_block, @page_content_block2], PageContentBlock.visible.all
+  end
+
+  should "be ordered from page" do
+    assert_equal [@page_content_block, @page_content_block2, @page_content_block3], @page.page_content_blocks
+  end
+  
 end

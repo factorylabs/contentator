@@ -1,0 +1,31 @@
+img, div {
+  border: 0; 
+  }
+body {  
+  font-family: arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  }  
+  
+/* forms */
+#page_content_blocks_container .form_container {
+  padding:10px;
+  height:500px; 
+  width:400px; 
+  }
+#page_content_blocks_container .form_container label, input {
+  display:block;
+  }
+#page_content_blocks_container .form_container label, input {
+  display:block;
+  }  
+#page_content_blocks_container #cancel_button {
+  float: right;
+  } 
+
+.page_content_block .position_text_box {
+  display:inline;
+  width: 15px;
+  margin-right: 5px;
+  margin-top: -5px;
+}  

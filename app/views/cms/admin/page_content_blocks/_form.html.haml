@@ -3,7 +3,9 @@
 .form_container
   = link_to image_tag('icons/cancel.png'), content_path(@page.path), :id => 'cancel_button'
 
-  - form_for([:cms, :admin, @page_content_block], :html => {:multipart => true }) do |f|
+  - form_remote_for([:cms, :admin, @page_content_block], :before => "tinyMCE.triggerSave(true,true)", :html => {:multipart => true }) do |f|
+    = f.hidden_field :page_id, :value => @page.id 
+
     = f.label :title
     = f.text_field :title
 
