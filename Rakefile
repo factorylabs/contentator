@@ -8,3 +8,21 @@ require 'rake/testtask'
 require 'rake/rdoctask'
 
 require 'tasks/rails'
+
+
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "contentator"
+    gem.summary = %q{A lightweight cms that focuses on in place editing.}
+    gem.description = %q{A lightweight cms that focuses on in place editing.}
+    gem.email = "interactive@factorylabs.com"
+    gem.homepage = "http://github.com/factorylabs/contentator"
+    gem.authors = ["Factory Design Labs"]
+    gem.add_dependency('haml', '>= 2.2.6')
+    gem.files.exclude('.gitignore')
+  end
+
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
+end
