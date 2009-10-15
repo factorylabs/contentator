@@ -18,7 +18,7 @@ class Cms::Admin::PagesControllerTest < ActionController::TestCase
         {:controller => "cms/admin/pages", :action => 'update_page_tree'},
         {:path => '/admin/pages/update_page_tree', :method => :get}
       )
-      assert_equal('/admin/pages',  cms_admin_pages_path())
+      assert_equal('/admin/pages',  cms_admin_pages_path )
     end
 
     context "on GET to :index" do

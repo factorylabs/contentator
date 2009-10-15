@@ -13,11 +13,10 @@
     = yield :head
   %body
     #admin_toolbar_container
-      = render :partial => 'cms/admin/admin_toolbar'
+      = render :partial => 'cms/admin/admin_toolbar' if current_user
 
     -if flash[:notice] || flash[:error]
       #flash-notice= flash[:notice] if flash[:notice]
       #flash-error= flash[:error] if flash[:error]
 
-    #new_page_content_block
     #content= yield  

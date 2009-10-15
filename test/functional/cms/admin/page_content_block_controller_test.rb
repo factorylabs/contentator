@@ -5,6 +5,8 @@ class Cms::Admin::PageContentBlocksControllerTest < ActionController::TestCase
   def setup
     @page_content_block = Factory(:page_content_block)
     @page = Page.find(@page_content_block.page_id)
+    @page_content_block2 = Factory(:page_content_block, :position => 17, :page_id => @page.id)
+    @page_content_block3 = Factory(:page_content_block, :position => 3, :page_id => @page.id)
   end
 
   should "route" do
@@ -39,7 +41,7 @@ class Cms::Admin::PageContentBlocksControllerTest < ActionController::TestCase
     should_respond_with :success
   end
 
-  context "stubbed valid page_content_block" do
+  context "stubbed valid page content block" do
     setup do
       PageContentBlock.any_instance.stubs(:valid?).returns(true)
     end
@@ -73,7 +75,7 @@ class Cms::Admin::PageContentBlocksControllerTest < ActionController::TestCase
     end
   end
   
-  context "stubbed invalid page" do
+  context "stubbed invalid page content block" do
     setup do
       PageContentBlock.any_instance.stubs(:valid?).returns(false)
     end
@@ -116,4 +118,20 @@ class Cms::Admin::PageContentBlocksControllerTest < ActionController::TestCase
     should_render_template :page_content_blocks_container
     should_respond_with :success
   end
+
+  context "on POST to :sort" do
+    setup do
+      post :sort, :page_id => @page.id, :page_content_blocks => {@page_content_block.id => '4', @page_content_block2.id => '1', @page_content_block3.id => '2'}
+    end
+
+    should "sort page content blocks" do
+      assert_equal 4, @page_content_block.reload.position
+      assert_equal 1, @page_content_block2.reload.position
+      assert_equal 2, @page_content_block3.reload.position
+    end
+    
+    should_assign_to :page
+    should_redirect_to('content path') { content_path(@page.path) }
+  end
+
 end

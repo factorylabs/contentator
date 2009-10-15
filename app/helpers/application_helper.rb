@@ -22,6 +22,7 @@ module ApplicationHelper
   end
   
   def sort_field(id, pos)
+    return unless current_user
     text_field_tag "page_content_blocks[#{id}]", pos, :class => 'position_text_box'
   end
 
