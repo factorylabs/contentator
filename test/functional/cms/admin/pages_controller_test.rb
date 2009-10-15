@@ -15,10 +15,31 @@ class Cms::Admin::PagesControllerTest < ActionController::TestCase
         {:path => '/admin/pages', :method => :get}
       )
       assert_recognizes(
+        {:controller => "cms/admin/pages", :action => 'create'},
+        {:path => '/admin/pages/', :method => :post}
+      )
+      assert_recognizes(
+        {:controller => "cms/admin/pages", :action => 'new'},
+        {:path => '/admin/pages/new', :method => :get}
+      )
+      assert_recognizes(
+        {:controller => "cms/admin/pages", :action => 'edit', :id => '1'},
+        {:path => '/admin/pages/1/edit', :method => :get}
+      )
+      assert_recognizes(
+        {:controller => "cms/admin/pages", :action => 'update', :id => '1'},
+        {:path => '/admin/pages/1', :method => :put}
+      )
+      assert_recognizes(
         {:controller => "cms/admin/pages", :action => 'update_page_tree'},
         {:path => '/admin/pages/update_page_tree', :method => :get}
       )
       assert_equal('/admin/pages',  cms_admin_pages_path )
+      assert_equal('/admin/pages', cms_admin_pages_path())
+      assert_equal('/admin/pages/new', new_cms_admin_page_path())
+      assert_equal('/admin/pages/1/edit', edit_cms_admin_page_path(1))
+      assert_equal('/admin/pages/1', cms_admin_page_path(1))
+      assert_equal('/admin/pages/update_page_tree', update_page_tree_cms_admin_pages_path())
     end
 
     context "on GET to :index" do

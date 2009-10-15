@@ -11,14 +11,30 @@ class Cms::Admin::PageContentBlocksControllerTest < ActionController::TestCase
 
   should "route" do
     assert_recognizes(
-      {:controller => "cms/admin/page_content_blocks", :action => 'index'},
-      {:path => '/admin/page_content_blocks', :method => :get}
+      {:controller => "cms/admin/page_content_blocks", :action => 'sort'},
+      {:path => '/admin/page_content_blocks/sort', :method => :post}
     )
     assert_recognizes(
-      {:controller => "cms/admin/page_content_blocks", :action => 'sort'},
-      {:path => '/admin/page_content_blocks/sort', :method => :get}
+      {:controller => "cms/admin/page_content_blocks", :action => 'create'},
+      {:path => '/admin/page_content_blocks/', :method => :post}
     )
-    assert_equal('/admin/page_content_blocks',  cms_admin_page_content_blocks_path())
+    assert_recognizes(
+      {:controller => "cms/admin/page_content_blocks", :action => 'new'},
+      {:path => '/admin/page_content_blocks/new', :method => :get}
+    )
+    assert_recognizes(
+      {:controller => "cms/admin/page_content_blocks", :action => 'edit', :id => '1'},
+      {:path => '/admin/page_content_blocks/1/edit', :method => :get}
+    )
+    assert_recognizes(
+      {:controller => "cms/admin/page_content_blocks", :action => 'update', :id => '1'},
+      {:path => '/admin/page_content_blocks/1', :method => :put}
+    )
+    assert_equal('/admin/page_content_blocks/sort',  sort_cms_admin_page_content_blocks_path())
+    assert_equal('/admin/page_content_blocks', cms_admin_page_content_blocks_path())
+    assert_equal('/admin/page_content_blocks/new', new_cms_admin_page_content_block_path())
+    assert_equal('/admin/page_content_blocks/1/edit', edit_cms_admin_page_content_block_path(1))
+    assert_equal('/admin/page_content_blocks/1', cms_admin_page_content_block_path(1))
   end
       
   context "on POST to :new" do

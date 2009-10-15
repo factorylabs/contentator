@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = %q{pages_tree}
+  s.name = %q{contentator}
   s.version = "0.0.1"
   s.date = %q{2007-09-27}
   s.authors = ["Factory Design Labs"]
