@@ -1,7 +1,13 @@
-gem "contentator"
+puts "    Applying contentator templates to project"
+
+# gem "contentator"
 
 generate :contentator
 
+puts "generated wtf"
+
+# plugin(name, options = {})
+# acts_as_tree    paperclip       permalink_fu    tiny_mce
 
 
 #files

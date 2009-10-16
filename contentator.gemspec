@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Factory Design Labs"]
-  s.date = %q{2009-10-15}
+  s.date = %q{2009-10-16}
   s.description = %q{A lightweight cms that focuses on in place editing.}
   s.email = %q{interactive@factorylabs.com}
   s.extra_rdoc_files = [
@@ -54,7 +54,6 @@ Gem::Specification.new do |s|
      "config/initializers/session_store.rb",
      "config/locales/en.yml",
      "config/routes.rb",
-     "contentator.gemspec",
      "db/migrate/20091002165818_create_pages.rb",
      "db/migrate/20091002211930_create_home_page.rb",
      "db/migrate/20091007222703_create_page_content_blocks.rb",
@@ -70,6 +69,7 @@ Gem::Specification.new do |s|
      "lib/generators/content/templates/model.rb",
      "lib/generators/content/templates/unit_test.rb",
      "lib/generators/content/templates/view.rb.rb",
+     "lib/template.rb",
      "public/404.html",
      "public/422.html",
      "public/500.html",
