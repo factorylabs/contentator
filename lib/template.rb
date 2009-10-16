@@ -1,7 +1,7 @@
 puts "    Applying contentator templates to project"
 
 gem "contentator"
-generate :contentator
+generate :contentator_files
 
 
 # plugin(name, options = {})
