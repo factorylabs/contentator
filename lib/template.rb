@@ -3,6 +3,8 @@ puts "    Applying contentator templates to project"
 gem "contentator"
 generate :contentator_files
 
+# test = ContentatorFilesGenerator.new
+
 
 # plugin(name, options = {})
 # acts_as_tree    paperclip       permalink_fu    tiny_mce

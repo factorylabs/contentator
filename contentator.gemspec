@@ -1397,6 +1397,8 @@ Gem::Specification.new do |s|
      "public/robots.txt",
      "public/stylesheets/admin_standard.css",
      "public/stylesheets/application.css",
+     "rails_generators/contentator_files/contentator_files_generator.rb",
+     "rails_generators/contentator_files/templates/README",
      "script/about",
      "script/console",
      "script/dbconsole",
