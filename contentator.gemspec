@@ -110,7 +110,7 @@ Gem::Specification.new do |s|
      "public/stylesheets/admin_standard.css",
      "public/stylesheets/application.css",
      "rails_generators/contentator_files/contentator_files_generator.rb",
-     "rails_generators/contentator_files/templates/README",
+     "rails_generators/contentator_files/templates/application.rb",
      "test/factories.rb",
      "test/functional/cms/admin/page_content_block_controller_test.rb",
      "test/functional/cms/admin/pages_controller_test.rb",
