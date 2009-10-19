@@ -8,4 +8,13 @@ gems:
   lib: 'factory_girl'
   source: 'http://gems.github.com'
 - name: haml
-  version: '>= 2.2.6'   
+  version: '>= 2.2.6' 
+- name: mocha
+  version: '>= 0.9.8' 
+- name: paperclip
+  version: '>= 2.1.2'
+- name: kete-tiny_mce
+  version: '>= 0.1.0' 
+  lib: 'tiny_mce'
+  source: 'http://gems.github.com'
+  
