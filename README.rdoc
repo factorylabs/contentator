@@ -1,13 +1,13 @@
-== DESCRIPTION:
+== Contentator
 
 Contentator is designed to be a flexible, light cms.  Hopefully it won't get in your way and will give you an easy way to add inline content editing and navigation   management.
 
-== INSTALL:
+== Install
 
     todo: add to gemcutter
     sudo gem install factorylabs-contentator --source=http://gems.github.com
 
-== Setup:
+== Usage
 
 Create a new rails app with the contentator template
 
@@ -21,5 +21,5 @@ Then drop in a database.yml and fire up the database
     
 Start the server and begin adding content.  Go to /admin and begin adding pages.  
 
-== Custom Content:
+== Custom Content
 
