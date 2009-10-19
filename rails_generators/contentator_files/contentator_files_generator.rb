@@ -2,7 +2,7 @@ class ContentatorFilesGenerator < Rails::Generator::Base
   def manifest
     record do |m|
       #copy all the cms files into the new project
-      m.file '../../../config/routes.rb', 'config/routes.rb'
+      m.file '../../../config/routes.rb', 'config/routes.rb', :collision => :force
 
       m.directory('app/controllers/cms/admin')      
       m.directory('app/helpers/cms/admin')      
@@ -76,6 +76,8 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../public/stylesheets/admin_standard.css', 'public/stylesheets/admin_standard.css'
       m.file '../../../public/stylesheets/application.css', 'public/stylesheets/application.css'
       
+      m.file '../../../test/factories.rb', 'test/factories.rb'
+
       m.directory('test/functional/cms/admin')      
       m.file '../../../test/functional/cms/admin/page_content_block_controller_test.rb', 'test/functional/cms/admin/page_content_block_controller_test.rb'
       m.file '../../../test/functional/cms/admin/pages_controller_test.rb', 'test/functional/cms/admin/pages_controller_test.rb'
@@ -84,7 +86,7 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../test/unit/page_content_block_test.rb', 'test/unit/page_content_block_test.rb'
       m.file '../../../test/unit/page_test.rb', 'test/unit/page_test.rb'
 
-      m.file '../../../public/javascripts/application.js', 'public/javascripts/application.js', :collision => :force
+      m.file '../../../public/javascripts/admin.js', 'public/javascripts/admin.js', :collision => :force
     end
   end  
 end
