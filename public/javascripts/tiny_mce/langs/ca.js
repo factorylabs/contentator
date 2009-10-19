@@ -1,6 +1,6 @@
 tinyMCE.addI18n({ca:{
 common:{
-edit_confirm:"Voleu utilitzar el mode WYSIWYG?",
+edit_confirm:"Vols utilitzar el mode visible (WYSIWYG) per a aquesta \u00E0rea de text?",
 apply:"Aplica",
 insert:"Insereix",
 update:"Actualitza",
@@ -8,17 +8,17 @@ cancel:"Cancel\u00B7la",
 close:"Tanca",
 browse:"Explora",
 class_name:"Classe",
-not_set:"-- No definit --",
-clipboard_msg:"Copia/Retalla/Enganxa no es troba disponible al Mozilla ni al Firefox.\nVoleu m\u00E9s informaci\u00F3 sobre aquesta q\u00FCesti\u00F3?",
-clipboard_no_support:"El vostre navegador actualment no ho admet, utilitzeu les dreceres de teclat.",
-popup_blocked:"El bloqueig de finestres emergents ha inhabilitat una finestra que proporciona funcionalitat a l\'aplicaci\u00F3. Cal que desactiveu el bloqueig de finestres emergents en aquest lloc per tal de poder utilitzar de forma completa aquesta eina.",
-invalid_data:"Error: heu introdu\u00EFt valors no v\u00E0lids, els marcats en vermell.",
+not_set:"-- Sense establir --",
+clipboard_msg:"Copia/Retalla/Enganxa no est\u00E0 disponible en Mozilla/Firefox.\nVols m\u00E9s informaci\u00F3 sobre aquest tema?",
+clipboard_no_support:"Actualment no est\u00E0 suportat pel teu navegador, utilitza les dreceres de teclat en lloc seu.",
+popup_blocked:"Ho sentim, per\u00F2 ens hem adonat que el teu bloquejador de finestres emergents ha desactivat una finestra que proporciona funcionalitat a l'aplicaci\u00F3. Haur\u00E0s de desactivar el blocatge de finestres emergents en aquest lloc per tal d'utilitzar plenament aquesta eina.",
+invalid_data:"Error: Has introdu\u00EFt valors incorrectes, te'ls marquem en vermell.",
 more_colors:"M\u00E9s colors"
 },
 contextmenu:{
 align:"Alineaci\u00F3",
 left:"Esquerra",
-center:"Centre",
+center:"Centrat",
 right:"Dreta",
 full:"Justificat"
 },
@@ -26,129 +26,129 @@ insertdatetime:{
 date_fmt:"%d-%m-%Y",
 time_fmt:"%H:%M:%S",
 insertdate_desc:"Insereix la data",
-inserttime_desc:"Insereix l\'hora",
-months_long:"Jgener,febrer,mar\u00E7,abril,maig,juny,juliol,agost,setembre,octubre,novembre,desembre",
-months_short:"gen.,febr.,mar\u00E7,abr.,maig,juny,jul.,ag.,set.,oct.,nov.,des.",
-day_long:"diumenge,dilluns,dimarts,dimecres,dijous,divendres,dissabte,diumenge",
-day_short:"dg.,dl.,dt.,dc.,dj.,dv.,ds.,dg."
+inserttime_desc:"Insereix l'hora",
+months_long:"Gener,Febrer,Mar\u00E7,Abril,Maig,Juny,Juliol,Agost,Setembre,Octubre,Novembre,Desembre",
+months_short:"Gen,Feb,Mar,Abr,Mai,Jun,Jul,Ago,Set,Oct,Nov,Des",
+day_long:"Diumenge,Dilluns,Dimarts,Dimecres,Dijous,Divendres,Dissabte,Diumenge",
+day_short:"Dmg,Dll,Dmt,Dmc,Djs,Dvs,Dss,Dmg"
 },
 print:{
 print_desc:"Imprimeix"
 },
 preview:{
-preview_desc:"Previsualitzaci\u00F3"
+preview_desc:"Vista pr\u00E8via"
 },
 directionality:{
-ltr_desc:"Direcci\u00F3 esquerra a dreta",
-rtl_desc:"Direcci\u00F3 dreta a esquerra"
+ltr_desc:"Direcci\u00F3 d'esquerra a dreta",
+rtl_desc:"Direcci\u00F3 de dreta a esquerra"
 },
 layer:{
-insertlayer_desc:"Insereix una nova capa",
-forward_desc:"Mou endavant",
-backward_desc:"Mou endarrera",
-absolute_desc:"Conmuta el posicionament absolut",
-content:"Nova Capa..."
+insertlayer_desc:"Insereix capa nova",
+forward_desc:"Despla\u00E7a endavant",
+backward_desc:"Despla\u00E7a endarrere",
+absolute_desc:"Canvia el posicionament absolut",
+content:"Nova capa..."
 },
 save:{
 save_desc:"Desa",
 cancel_desc:"Cancel\u00B7la tots els canvis"
 },
 nonbreaking:{
-nonbreaking_desc:"Insereix un car\u00E0cter espai en blanc"
+nonbreaking_desc:"Insereix espai no separable"
 },
 iespell:{
-iespell_desc:"Executa la correcci\u00F3 ortogr\u00E0fica",
-download:"no he detectat l\'ieSpell. Voleu instal\u00B7lar-ho?"
+iespell_desc:"Comprovaci\u00F3 ortogr\u00E0fica",
+download:"No s'ha detectat ieSpell. Vols instal\u00B7lar-lo ara?"
 },
 advhr:{
-advhr_desc:"Filet horitzontal"
+advhr_desc:"Regle horitzontal"
 },
 emotions:{
 emotions_desc:"Emoticones"
 },
 searchreplace:{
-search_desc:"Cerca",
-replace_desc:"Cerca/Reempla\u00E7a"
+search_desc:"Busca",
+replace_desc:"Busca/Substitueix"
 },
 advimage:{
 image_desc:"Insereix/edita imatge"
 },
 advlink:{
-link_desc:"Insert/edit link"
+link_desc:"Insereix/edita enlla\u00E7"
 },
 xhtmlxtras:{
 cite_desc:"Citaci\u00F3",
-abbr_desc:"Abreviaci\u00F3",
+abbr_desc:"Abreujament",
 acronym_desc:"Acr\u00F2nim",
-del_desc:"Eliminaci\u00F3",
+del_desc:"Supressi\u00F3",
 ins_desc:"Inserci\u00F3",
-attribs_desc:"Insereix/edita atributs"
+attribs_desc:"Insereix/Edita Atributs"
 },
 style:{
-desc:"Edita l\'estil CSS"
+desc:"Edita l'Estil CSS"
 },
 paste:{
-paste_text_desc:"Enganxa com a text pla",
-paste_word_desc:"Enganxa des del Word",
-selectall_desc:"Selecciona-ho tot"
+paste_text_desc:"Enganxa com a Text Planer",
+paste_word_desc:"Enganxa des de Word",
+selectall_desc:"Selecciona-ho Tot"
 },
 paste_dlg:{
-text_title:"Amb el teclat utilitzeu CTRL+V per a enganxar el text dins la finestra.",
-text_linebreaks:"Conserva els salts de l\u00EDnia",
-word_title:"Amb el teclat utilitzeu CTRL+V per a enganxar el text dins la finestra."
+text_title:"Utilitza CTRL+V al teclat per enganxar el text a la finestra.",
+text_linebreaks:"Mantingues els salts de l\u00EDnia",
+word_title:"Utilitza CTRL+V al teclat per enganxar el text a la finestra."
 },
 table:{
 desc:"Insereix una nova taula",
-row_before_desc:"Insereix una fila abans",
-row_after_desc:"Insereix una fila despr\u00E9s",
-delete_row_desc:"Elimina la fila",
-col_before_desc:"Insereix una columna abans",
-col_after_desc:"Insereix una columna despr\u00E9s",
-delete_col_desc:"Elimina la columna",
-split_cells_desc:"Divideix les cel\u00B7les fusionades",
-merge_cells_desc:"Fusiona les cel\u00B7les",
-row_desc:"Propietats de la fila",
-cell_desc:"Propietats de la cel\u00B7la",
+row_before_desc:"Insereix fila abans",
+row_after_desc:"Insereix fila despr\u00E9s",
+delete_row_desc:"Suprimeix fila",
+col_before_desc:"Insereix columna abans",
+col_after_desc:"Insereix columna despr\u00E9s",
+delete_col_desc:"Elimina columna",
+split_cells_desc:"Parteix les cel\u00B7les refoses de la taula",
+merge_cells_desc:"Refon les cel\u00B7les de la taula",
+row_desc:"Propietats de la fila de la taula",
+cell_desc:"Propietats de la cel\u00B7la de la taula",
 props_desc:"Propietats de la taula",
-paste_row_before_desc:"Enganxa la fila abans",
-paste_row_after_desc:"Enganxa la fila despr\u00E9s",
-cut_row_desc:"Retalla la fila",
-copy_row_desc:"Copia la fila",
-del:"Elimina la taula",
+paste_row_before_desc:"Enganxa la fila de la taula abans",
+paste_row_after_desc:"Enganxa la fila de la taula despr\u00E9s",
+cut_row_desc:"Retalla la fila de la taula",
+copy_row_desc:"Copia la fila de la taula",
+del:"Suprimeix la taula",
 row:"Fila",
 col:"Columna",
 cell:"Cel\u00B7la"
 },
 autosave:{
-unload_msg:"Els canvis que heu fet es perdran si navegueu a fora d\'aquesta p\u00E0gina."
+unload_msg:"Els canvis que has fet es perdran si surts d'aquesta p\u00E0gina."
 },
 fullscreen:{
-desc:"Commuta a mode de pantalla completa"
+desc:"Mode de pantalla completa"
 },
 media:{
-desc:"Insereix / edita multim\u00E8dia incrustat",
-edit:"Edita multim\u00E8dia incrustat"
+desc:"Insereix / edita mitj\u00E0 encastat",
+edit:"Edita mitj\u00E0 encastat"
 },
 fullpage:{
 desc:"Propietats del document"
 },
 template:{
-desc:"Insereix un contingut predefinit"
+desc:"Insereix contingut predefinit de plantilla"
 },
 visualchars:{
-desc:"Activa/desactiva els car\u00E0cters de control visual."
+desc:"Car\u00E0cters de control visual des/activats."
 },
 spellchecker:{
-desc:"Corrector ortogr\u00E0fic",
+desc:"Des/activa el corrector ortogr\u00E0fic",
 menu:"Configuraci\u00F3 del corrector",
-ignore_word:"Ignora el mot",
-ignore_words:"Ignora\'ls tots",
+ignore_word:"Ignora",
+ignore_words:"Ignora-les totes",
 langs:"Idiomes",
-wait:"Espereu...",
+wait:"Espera, si et plau...",
 sug:"Suggeriments",
-no_sug:"Cap suggeriment",
-no_mpell:"No s\'ha trobat cap falta d\'ortografia."
+no_sug:"No hi ha cap suggeriment",
+no_mpell:"No s'ha trobat cap incorrecci\u00F3."
 },
 pagebreak:{
-desc:"Insereix un salt de p\u00E0gina."
+desc:"Insereix salt de p\u00E0gina."
 }}});

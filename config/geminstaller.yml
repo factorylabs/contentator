@@ -11,8 +11,10 @@ gems:
   version: '>= 2.2.6' 
 - name: mocha
   version: '>= 0.9.8' 
-- name: paperclip
+- name: thoughtbot-paperclip
   version: '>= 2.1.2'
+  lib: 'paperclip'
+  source: 'http://gems.github.com'
 - name: kete-tiny_mce
   version: '>= 0.1.0' 
   lib: 'tiny_mce'

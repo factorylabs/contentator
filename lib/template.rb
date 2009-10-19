@@ -1,12 +1,4 @@
-gem 'contentator'
-gem 'kete-tiny_mce', :lib => 'tiny_mce'
-gem 'thoughtbot-shoulda', :lib => 'shoulda'
-gem 'thoughtbot-factory_girl', :lib => 'factory_girl'
-gem 'haml'
-gem 'mocha'
-gem 'paperclip'
-
-run "sudo rake gems:install"
+run "rm public/index.html"
 
 puts "    Installing plugins"
 plugin 'acts_as_tree', :git => 'git://github.com/rails/acts_as_tree.git'

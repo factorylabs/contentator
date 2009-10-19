@@ -75,6 +75,9 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       
       m.file '../../../public/stylesheets/admin_standard.css', 'public/stylesheets/admin_standard.css'
       m.file '../../../public/stylesheets/application.css', 'public/stylesheets/application.css'
+
+      #refused to just copy the file for some reason.  
+      m.template 'application.rb', 'public/javascripts/application.js', :collision => :force
       
       m.file '../../../test/factories.rb', 'test/factories.rb'
       m.file '../../../test/test_helper.rb', 'test/test_helper.rb', :collision => :force
@@ -87,8 +90,9 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../test/unit/page_content_block_test.rb', 'test/unit/page_content_block_test.rb'
       m.file '../../../test/unit/page_test.rb', 'test/unit/page_test.rb'
 
-      #refused to just copy the file for some reason.  
-      m.template 'application.rb', 'public/javascripts/application.js', :collision => :force
+      m.file '../../../config/geminstaller.yml', 'config/geminstaller.yml'
+      m.file '../../../config/geminstaller.local.yml', 'config/geminstaller.local.yml'
+      m.file '../../../config/environment.rb', 'config/environment.rb', :collision => :force
     end
   end  
 end
