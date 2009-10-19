@@ -86,7 +86,8 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../test/unit/page_content_block_test.rb', 'test/unit/page_content_block_test.rb'
       m.file '../../../test/unit/page_test.rb', 'test/unit/page_test.rb'
 
-      m.file '../../../public/javascripts/admin.js', 'public/javascripts/admin.js', :collision => :force
+      # refused to just cppy the file for some reason.  
+      m.template 'application.rb', 'public/javascripts/admin.js', :collision => :force
     end
   end  
 end

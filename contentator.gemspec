@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Factory Design Labs"]
-  s.date = %q{2009-10-16}
+  s.date = %q{2009-10-19}
   s.description = %q{A lightweight cms that focuses on in place editing.}
   s.email = %q{interactive@factorylabs.com}
   s.extra_rdoc_files = [
