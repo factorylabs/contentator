@@ -1,9 +1,11 @@
+%iframe#form_iframe{:name => 'form_iframe', :style => 'width:0;height:0;border:0;'}
+
 = tiny_mce_init 
 
 .form_container
   = link_to image_tag('icons/cancel.png'), content_path(@page.path), :id => 'cancel_button'
 
-  - form_remote_for([:cms, :admin, @page_content_block], :before => "tinyMCE.triggerSave(true,true)", :html => {:multipart => true }) do |f|
+  - form_for([:cms, :admin, @page_content_block], :before => "tinyMCE.triggerSave(true,true)", :html => {:multipart => true, :target => 'form_iframe'}) do |f|
     = f.hidden_field :page_id, :value => @page.id 
 
     = f.label :title

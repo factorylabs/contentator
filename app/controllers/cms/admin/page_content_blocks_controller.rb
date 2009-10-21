@@ -17,13 +17,17 @@ class Cms::Admin::PageContentBlocksController < ApplicationController
     @page_content_block = @page.page_content_blocks.new(params[:page_content_block])
 
     if @page_content_block.save
-      render :update do |page|
-        page.replace_html 'new_page_content_block', ''  
-        page.replace_html 'page_content_blocks_container', :partial => 'cms/content/page_content_blocks_container' 
+      responds_to_parent do
+        render :update do |page|
+          page.replace_html 'new_page_content_block', ''  
+          page.replace_html 'page_content_blocks_container', :partial => 'cms/content/page_content_blocks_container' 
+        end  
       end  
     else
-      render :update do |page|
-        page.replace_html "page_content_block_", :partial => 'cms/admin/page_content_blocks/form'  
+      responds_to_parent do
+        render :update do |page|
+          page.replace_html "page_content_block_", :partial => 'cms/admin/page_content_blocks/form'  
+        end  
       end  
     end  
   end
@@ -35,12 +39,16 @@ class Cms::Admin::PageContentBlocksController < ApplicationController
     @page_content_block.photo = nil if params[:remove_image]   
 
     if @page_content_block.update_attributes(params[:page_content_block])
-      render :update do |page|
-        page.replace_html 'page_content_blocks_container', :partial => 'cms/content/page_content_blocks_container' 
+      responds_to_parent do
+        render :update do |page|
+          page.replace_html 'page_content_blocks_container', :partial => 'cms/content/page_content_blocks_container' 
+        end  
       end  
     else
-      render :update do |page|
-        page.replace_html "page_content_block_", :partial => 'cms/admin/page_content_blocks/form'  
+      responds_to_parent do
+        render :update do |page|
+          page.replace_html "page_content_block_", :partial => 'cms/admin/page_content_blocks/form'  
+        end  
       end  
     end  
   end
