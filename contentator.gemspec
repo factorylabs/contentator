@@ -9,14 +9,14 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Factory Design Labs"]
-  s.date = %q{2009-10-19}
+  s.date = %q{2009-10-21}
   s.description = %q{A lightweight cms that focuses on in place editing.}
   s.email = %q{interactive@factorylabs.com}
   s.extra_rdoc_files = [
-    "README"
+    "README.rdoc"
   ]
   s.files = [
-    "README",
+    "README.rdoc",
      "Rakefile",
      "VERSION",
      "app/controllers/application_controller.rb",
@@ -104,7 +104,7 @@ Gem::Specification.new do |s|
      "public/images/icons/edit.png",
      "public/images/icons/folder.png",
      "public/images/icons/move.png",
-     "public/images/photos/1/original_racecar.jpg",
+     "public/images/photos/16/original_racecar.jpg",
      "public/images/rails.png",
      "public/robots.txt",
      "public/stylesheets/admin_standard.css",

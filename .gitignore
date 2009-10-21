@@ -9,3 +9,4 @@ db/schema.rb
 *.iws
 tmp/restart.txt
 pkg
+public/images/photos
