@@ -2,6 +2,8 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  before_filter :set_locale 
+
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
@@ -20,5 +22,14 @@ class ApplicationController < ActionController::Base
   def current_user
     return true
   end  
+
+  def set_locale 
+    I18n.locale = extract_locale_from_subdomain 
+  end 
+
+  def extract_locale_from_subdomain 
+    parsed_locale = request.host.split('.').first
+    (I18n.available_locales.include? parsed_locale.to_sym) ? parsed_locale : nil 
+  end 
 
 end
