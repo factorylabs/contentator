@@ -1,4 +1,4 @@
 #admin_toolbar
-  = link_to 'Go to Admin', cms_admin_root_path
+  = link_to t('cms.admin.toolbar.go_to_admin'), cms_admin_root_path
   |
-  = link_to_remote('Add content', :update => "new_page_content_block", :url =>  new_cms_admin_page_content_block_path(:page_id => @page.id), :method => :get)
+  = link_to_remote(t('cms.admin.toolbar.add_content'), :update => "new_page_content_block", :url =>  new_cms_admin_page_content_block_path(:page_id => @page.id), :method => :get)

@@ -4,13 +4,13 @@ module Cms::Admin::PagesHelper
     make_tree_recursive(collection) do |item|
       controls = %{
         #{link_to('', send("edit_cms_admin_#{model}_path", item), {:class => 'edit'} )} 
-        #{link_to('', send("cms_admin_#{model}_path", item), {:method => :delete, :confirm => 'Are you sure you want to delete this item?', :class => 'delete'})}
+        #{link_to('', send("cms_admin_#{model}_path", item), {:method => :delete, :confirm => t('form_global.delete_warning'), :class => 'delete'})}
       }
       toggle = item.children.empty? ? '<span class="spacer">&nbsp;</span>': link_to_function(image_tag('icons/folder.png'), "$(this).next('ul').toggle()")
 
       buffer = <<-"end;"
         #{toggle}
-        <span class="tree-controls">#{controls}<a class="move">move</a></span>
+        <span class="tree-controls">#{controls}<a class="move">t('form_global.delete_warning')</a></span>
         <span>#{item.title} (/#{item.path})</span>
       end;
  

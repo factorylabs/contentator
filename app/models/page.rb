@@ -7,11 +7,11 @@ class Page < ActiveRecord::Base
   has_many :page_content_blocks, :order => :position
 
   validates_presence_of :title
-  validates_length_of :title, :within => 1..255, :message => 'must have a length between 1 and 255 characters'
+  validates_length_of :title, :within => 1..255, :message => I18n.t('cms.admin.pages.error_length')
   validates_presence_of :slug
-  validates_uniqueness_of :slug, :scope => :parent_id, :message => 'must be unique, slug already taken'   
-  validates_length_of :slug, :within => 1..255, :message => 'must have a length between 1 and 255 characters'       
-  validates_format_of :slug, :with => /^[a-z\d\-]+$/, :message => 'can only contain lowercase letters, numbers and dashes'
+  validates_uniqueness_of :slug, :scope => :parent_id, :message => I18n.t('cms.admin.pages.error_slug_unique')  
+  validates_length_of :slug, :within => 1..255, :message => I18n.t('cms.admin.pages.error_length')      
+  validates_format_of :slug, :with => /^[a-z\d\-]+$/, :message => I18n.t('cms.admin.pages.error_lowercase')
   validates_associated :parent
 
   before_save :create_full_path
@@ -31,11 +31,11 @@ class Page < ActiveRecord::Base
 
   def destroy
     if self == Page.home_page
-      self.errors.add_to_base 'Cannot delete home page.'
+      self.errors.add_to_base I18n.t('cms.admin.pages.error_delete_home')
       return
     end
     unless self.children.empty?
-      self.errors.add_to_base 'Cannot delete page with children. Please delete children first.'
+      self.errors.add_to_base I18n.t('cms.admin.pages.error_delete_children')
       return
     end
     super

@@ -19,7 +19,7 @@ class Cms::Admin::PagesController < Cms::Admin::AdminController
     @pages = Page.ordered
 
     if @page.save
-      flash[:notice] = 'Page was successfully created.'
+      flash[:notice] = t('cms.admin.pages.flash_create')
       redirect_to(cms_admin_pages_path)
     else
       render :action => "new"
@@ -31,7 +31,7 @@ class Cms::Admin::PagesController < Cms::Admin::AdminController
     @pages = Page.ordered
 
     if @page.update_attributes(params[:page])
-      flash[:notice] = 'Page was successfully updated.'
+      flash[:notice] = t('cms.admin.pages.flash_update')
       redirect_to( cms_admin_pages_path )
     else
       render :action => "edit"
@@ -41,7 +41,7 @@ class Cms::Admin::PagesController < Cms::Admin::AdminController
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
-    flash[:notice] = @page ? @page.errors.on_base : flash[:notice] = 'Page was deleted'
+    flash[:notice] = @page ? @page.errors.on_base : flash[:notice] = t('cms.admin.pages.flash_delete')
     redirect_to(cms_admin_pages_path)
   end
 
