@@ -93,9 +93,8 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../config/geminstaller.yml', 'config/geminstaller.yml'
       m.file '../../../config/geminstaller.local.yml', 'config/geminstaller.local.yml'
       m.file '../../../config/environment.rb', 'config/environment.rb', :collision => :force
-
-      m.file '../../../config/en.yml', 'config/en.yml', :collision => :force
-      m.file '../../../config/de.yml', 'config/de.yml'
+      m.file '../../../config/locales/en.yml', 'config/locales/en.yml', :collision => :force
+      m.file '../../../config/locales/de.yml', 'config/locales/de.yml'
     end
   end  
 end
