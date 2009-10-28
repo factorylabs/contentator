@@ -12,10 +12,12 @@
       #body_wrapper
         #logo
           / %img{ :src => "/images/admin_standard/logo.png" }
-          #utility
-            #settings
-              %span= "#{t('cms.admin.layout.welcome')} #{@current_user.nil? ? '' : @current_user.login} -"
-              = link_to t('cms.admin.layout.logout'), '/logout'
+        #utility
+          #settings
+            %span= "#{t('cms.admin.layout.welcome')} #{@current_user.nil? ? '' : @current_user.login} -"
+            / = link_to t('cms.admin.layout.logout'), '/logout'
+            |
+            = link_to 'Home', content_path
         #body_container
           #context_wrapper
             #context_container

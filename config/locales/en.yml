@@ -2,6 +2,7 @@ en:
   layout:
     title: 'Temp Title - Change Me'
   form_global:
+    create: 'Create'
     update: 'Update'
     submit: 'Submit'
     back: 'Back'

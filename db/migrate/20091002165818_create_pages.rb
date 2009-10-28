@@ -12,9 +12,11 @@ class CreatePages < ActiveRecord::Migration
       t.boolean     :in_navigation
       t.timestamps
     end
+    Page.create_translation_table! :title => :string, :subtitle => :string, :template_name => :string
   end 
 
   def self.down
     drop_table :pages
+    Page.drop_translation_table!
   end
 end

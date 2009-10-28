@@ -1,6 +1,8 @@
 class Page < ActiveRecord::Base
   TEMPLATES = ['content', 'home']
 
+  translates :title, :subtitle, :template_name
+
   acts_as_tree :order => 'position'
   has_permalink :title, :slug, :scope => :parent_id
   
@@ -12,7 +14,7 @@ class Page < ActiveRecord::Base
   validates_uniqueness_of :slug, :scope => :parent_id, :message => I18n.t('cms.admin.pages.error_slug_unique')  
   validates_length_of :slug, :within => 1..255, :message => I18n.t('cms.admin.pages.error_length')      
   validates_format_of :slug, :with => /^[a-z\d\-]+$/, :message => I18n.t('cms.admin.pages.error_lowercase')
-  validates_associated :parent
+  # validates_associated :parent
 
   before_save :create_full_path
   before_save :check_parent

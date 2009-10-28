@@ -11,9 +11,11 @@ class CreatePageContentBlocks < ActiveRecord::Migration
       t.integer       :photo_file_size
       t.timestamps
     end
+    PageContentBlock.create_translation_table! :title => :string, :text => :text
   end
 
   def self.down
     drop_table :page_content_blocks
+    PageContentBlock.drop_translation_table!
   end
 end

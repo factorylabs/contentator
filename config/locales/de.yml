@@ -2,6 +2,7 @@ de:
   layout:
     title: 'GERMAN - Temp Title - Change Me'
   form_global:
+    create: 'GERMAN - Create'
     update: 'GERMAN - Update'
     submit: 'GERMAN - Submit'
     back: 'GERMAN - Back'
