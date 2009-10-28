@@ -82,9 +82,6 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../test/factories.rb', 'test/factories.rb'
       m.file '../../../test/test_helper.rb', 'test/test_helper.rb', :collision => :force
 
-      m.file '../../../config/en.yml', 'config/en.yml', :collision => :force
-      m.file '../../../config/de.yml', 'config/de.yml'
-
       m.directory('test/functional/cms/admin')      
       m.file '../../../test/functional/cms/admin/page_content_block_controller_test.rb', 'test/functional/cms/admin/page_content_block_controller_test.rb'
       m.file '../../../test/functional/cms/admin/pages_controller_test.rb', 'test/functional/cms/admin/pages_controller_test.rb'
@@ -96,6 +93,9 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../config/geminstaller.yml', 'config/geminstaller.yml'
       m.file '../../../config/geminstaller.local.yml', 'config/geminstaller.local.yml'
       m.file '../../../config/environment.rb', 'config/environment.rb', :collision => :force
+
+      m.file '../../../config/en.yml', 'config/en.yml', :collision => :force
+      m.file '../../../config/de.yml', 'config/de.yml'
     end
   end  
 end

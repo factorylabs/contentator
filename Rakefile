@@ -20,7 +20,7 @@ begin
     gem.homepage = "http://github.com/factorylabs/contentator"
     gem.authors = ["Factory Design Labs"]
     gem.add_dependency('haml', '>= 2.2.6')
-    gem.files.exclude('.gitignore', 'pkg', 'vendor', 'public/javascripts', 'script')
+    gem.files.exclude('.DS_Store', '.gitignore', 'pkg', 'vendor', 'public/javascripts', 'script')
   end
 
 rescue LoadError

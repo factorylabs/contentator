@@ -76,8 +76,6 @@ Gem::Specification.new do |s|
      "public/422.html",
      "public/500.html",
      "public/favicon.ico",
-     "public/images/.DS_Store",
-     "public/images/admin_standard/.DS_Store",
      "public/images/admin_standard/content-header-bg.png",
      "public/images/admin_standard/context-arrow.png",
      "public/images/admin_standard/context-bg.png",
