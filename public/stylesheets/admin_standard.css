@@ -554,6 +554,11 @@ form.styled .error-messages {
   border: 2px solid #FFA200;
   }
 
+input ,label, select{
+  display: block;
+  margin: 10px;
+}
+
 /* trees */
 ul.tree, ul.tree ul {
   margin: 0;
