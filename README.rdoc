@@ -23,3 +23,16 @@ Start the server and begin adding content.  Go to /admin and begin adding pages.
 
 == Custom Content
 
+There is a generator for custom cms content types.  It works much like a nested resource and creates inline editing.
+
+    script/generate content contact name:string email:string phone:string notes:text
+    
+The new content type will need to be wired up.  To create a contacts template just make a new template in the page model, add an admin tool in views/cms/admin/_admin_toolbar.html.haml and create a view in views/cms/content.
+
+== Globalization
+
+The admin text all translatable.  The english version is located in config/locales/en.yml.  There is also a sample de.yml file for testing locales.  Just add a new locale file to add other langauge support.
+
+The globalization2 plugin is also installed.  Dynamic content in pages and page content blocks can accept translations for any locale.  
+
+http://github.com/joshmh/globalize2
