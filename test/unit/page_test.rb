@@ -26,6 +26,7 @@ class PageTest < ActiveSupport::TestCase
   
   # Relationships
   should_have_many :page_content_blocks
+  should_have_many :file_attachments
   
   # Validations
   should_validate_presence_of :title

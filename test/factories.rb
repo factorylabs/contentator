@@ -22,3 +22,19 @@ Factory.define :page_content_block do |f|
   f.visible                         true
   f.updated_at                      '2009-04-01 12:00:00'
 end
+
+Factory.define :file_attachment do |f|
+  f.owner_id                        { Factory(:page).id }
+  f.owner_type                      'Page'
+  f.position                        1
+  f.visible                         true
+  f.updated_at                      '2009-04-01 12:00:00'
+end
+
+Factory.define :other_file_attachment, :class => 'FileAttachment' do |f|
+  f.owner_id                        { Factory(:page).id }
+  f.owner_type                      'Page'
+  f.position                        2
+  f.visible                         true
+  f.updated_at                      '2009-04-01 12:00:00'
+end

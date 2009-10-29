@@ -1,5 +1,6 @@
 class PageContentBlock < ActiveRecord::Base
   belongs_to :page
+  has_many :file_attachments, :as => :owner, :dependent => :destroy, :order => :position
 
   translates :title, :text
 

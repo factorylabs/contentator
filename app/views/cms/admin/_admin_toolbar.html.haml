@@ -1,4 +1,25 @@
 #admin_toolbar
   = link_to t('cms.admin.toolbar.go_to_admin'), cms_admin_root_path
   |
-  = link_to_remote(t('cms.admin.toolbar.add_content'), :update => "new_page_content_block", :url =>  new_cms_admin_page_content_block_path(:page_id => @page.id), :method => :get)
+  - case @page.template_name
+
+  - when 'gallery'
+    / - form_for(@page.galleries.new, :html => {:multipart => true }) do |f| 
+    /   = f.hidden_field :page_id, :value => @page.id 
+    /   = f.label :image_data,  "New Image"
+    /   = f.file_field :image_data, :size => 20
+    /   = submit_tag "Upload"
+    / 
+    / - form_tag sort_galleries_path do
+    /   = hidden_field_tag :page_id, @page.id
+    /   %table
+    /     %tr 
+    /       %td= submit_tag "Sort" 
+    /     - @page.galleries.each do |gallery| 
+    /       %tr
+    /         %td= image_tag gallery.image.public_filename(:thumb) if gallery.image
+    /         %td= link_to image_tag('icons/delete_jr.png'), gallery_path(gallery), :confirm => "Are you sure?", :method => :delete
+    /         %td= sort_field(gallery.id,gallery.position)
+  - else
+    = link_to_remote(t('cms.admin.toolbar.add_content'), :update => "new_page_content_block", :url =>  new_cms_admin_page_content_block_path(:page_id => @page.id), :method => :get)
+

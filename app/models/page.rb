@@ -7,6 +7,7 @@ class Page < ActiveRecord::Base
   has_permalink :title, :slug, :scope => :parent_id
   
   has_many :page_content_blocks, :order => :position
+  has_many :file_attachments, :as => :owner, :dependent => :destroy, :order => :position
 
   validates_presence_of :title
   validates_length_of :title, :within => 1..255, :message => I18n.t('cms.admin.pages.error_length')

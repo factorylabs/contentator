@@ -25,6 +25,7 @@ class PageContentBlockTest < ActiveSupport::TestCase
   
   # Relationships
   should_belong_to :page
+  should_have_many :file_attachments
 
   # Validations
    

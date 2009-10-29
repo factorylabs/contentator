@@ -18,4 +18,7 @@ class Cms::ContentController < ApplicationController
 
   def content
   end
+
+  def gallery
+  end
 end
