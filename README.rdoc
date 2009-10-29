@@ -36,3 +36,11 @@ The admin text all translatable.  The english version is located in config/local
 The globalization2 plugin is also installed.  Dynamic content in pages and page content blocks can accept translations for any locale.  
 
 http://github.com/joshmh/globalize2
+
+There is support for using locale subdomains already.  See set_locale in the application controller. Add the following to /etc/hosts
+
+    127.0.0.1       en.localhost
+    127.0.0.1       de.localhost
+    
+The locale will automatically be set based on the subdomain.    
+    
