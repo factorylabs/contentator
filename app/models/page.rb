@@ -1,5 +1,7 @@
 class Page < ActiveRecord::Base
-  TEMPLATES = ['content', 'home']
+  TEMPLATES = I18n.t('cms.admin.pages.templates.array').collect{|k,v| v}
+  
+  puts TEMPLATES.inspect
 
   translates :title, :subtitle, :template_name
 

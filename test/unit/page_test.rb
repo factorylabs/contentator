@@ -30,6 +30,11 @@ class PageTest < ActiveSupport::TestCase
   # Validations
   should_validate_presence_of :title
     
+  should "have templates home and content" do
+    assert Page::TEMPLATES.include?('home')
+    assert Page::TEMPLATES.include?('content')
+  end
+  
   should "act_as_tree" do
     assert_equal [@child], @page.children
   end
