@@ -42,3 +42,7 @@ de:
         error_lowercase: 'GERMAN - can only contain lowercase letters, numbers and dashes'
         error_delete_home: 'GERMAN - Cannot delete home page.'
         error_delete_children: 'GERMAN - Cannot delete page with children. Please delete children first.'
+        templates:
+          home: 'GERMAN - home'
+          content: 'GERMAN - content'
+          gallery: 'GERMAN - gallery'

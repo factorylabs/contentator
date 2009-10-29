@@ -1,8 +1,6 @@
 class Page < ActiveRecord::Base
-  TEMPLATES = I18n.t('cms.admin.pages.templates.array').collect{|k,v| v}
+  TEMPLATES = I18n.t('cms.admin.pages.templates').collect{|k,v| v}
   
-  puts TEMPLATES.inspect
-
   translates :title, :subtitle, :template_name
 
   acts_as_tree :order => 'position'

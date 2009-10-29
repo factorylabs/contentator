@@ -43,6 +43,6 @@ en:
         error_delete_home: 'Cannot delete home page.'
         error_delete_children: 'Cannot delete page with children. Please delete children first.'
         templates:
-          array:
-            home: 'home'
-            content: 'content'
+          home: 'home'
+          content: 'content'
+          gallery: 'gallery'
