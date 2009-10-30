@@ -13,17 +13,19 @@ body {
   height:500px; 
   width:400px; 
   }
-#page_content_blocks_container .form_container label, input {
-  display:block;
+#file_attachments_container .form_container {
+  padding:10px;
+  height:150px; 
+  width:400px; 
   }
-#page_content_blocks_container .form_container label, input {
+.form_container label, input {
   display:block;
   }  
-#page_content_blocks_container #cancel_button {
+.form_container  #cancel_button {
   float: right;
   } 
 
-.page_content_block .position_text_box {
+.position_text_box {
   display:inline;
   width: 15px;
   margin-right: 5px;

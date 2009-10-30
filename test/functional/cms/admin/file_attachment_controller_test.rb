@@ -30,7 +30,7 @@ class Cms::Admin::FileAttachmentsControllerTest < ActionController::TestCase
     
     context "on POST to :new" do
       setup do
-        post :new, :page_id => @page.id, :owner_type => @page.class, :owner_id => @page.id
+        post :new, :page_id => @page.id, :owner_type => @page.class.to_s, :owner_id => @page.id
       end
   
       should_assign_to :page
@@ -46,7 +46,7 @@ class Cms::Admin::FileAttachmentsControllerTest < ActionController::TestCase
     
       context "on POST to :create" do
         setup do
-          post :create, :file_attachment => Factory.attributes_for(:file_attachment).merge(:owner_type => @page.class, :owner_id => @page.id, :page_id => @page.id)
+          post :create, :file_attachment => Factory.attributes_for(:file_attachment).merge(:owner_type => @page.class.to_s, :owner_id => @page.id, :page_id => @page.id)
         end
     
         should_change('the number of file_attachments', :by => 1 ) { FileAttachment.count }
@@ -69,7 +69,7 @@ class Cms::Admin::FileAttachmentsControllerTest < ActionController::TestCase
   
       context "on POST to :create" do
         setup do
-          post :create, :file_attachment => Factory.attributes_for(:file_attachment).merge(:owner_type => @page.class, :owner_id => @page.id, :page_id => @page.id)
+          post :create, :file_attachment => Factory.attributes_for(:file_attachment).merge(:owner_type => @page.class.to_s, :owner_id => @page.id, :page_id => @page.id)
         end
   
         should_not_change('the number of file_attachments') {FileAttachment.count}

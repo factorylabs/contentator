@@ -8,7 +8,8 @@ class Cms::Admin::FileAttachmentsController < Cms::Admin::AdminController
 
   def create
     @page = Page.find(params[:file_attachment].delete('page_id'))
-    @owner = params[:file_attachment][:owner_type].find(params[:file_attachment][:owner_id])
+
+    @owner = params[:file_attachment][:owner_type].constantize.find(params[:file_attachment][:owner_id])
     @file_attachment = @owner.file_attachments.new(params[:file_attachment])
 
     if @file_attachment.save

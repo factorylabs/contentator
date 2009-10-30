@@ -4,6 +4,7 @@
   = link_to image_tag('icons/cancel.png'), content_path(@page.path), :id => 'cancel_button'
 
   - form_for([:cms, :admin, @file_attachment], :before => "tinyMCE.triggerSave(true,true)", :html => {:multipart => true, :target => 'form_iframe'}) do |f|
+    = f.hidden_field :page_id, :value => @page.id 
     = f.hidden_field :owner_id, :value => @page.id 
     = f.hidden_field :owner_type, :value => @page.class 
 

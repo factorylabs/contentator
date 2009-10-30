@@ -1,0 +1,9 @@
+#new_file_attachment
+
+- form_tag sort_cms_admin_file_attachments_path, :id => 'sort_form', :onsubmit => 'getPcbInputs();' do
+  = submit_tag t('form_global.sort')
+  = hidden_field_tag :page_id, @page.id
+  %br 
+
+- @page.file_attachments.each do |file_attachment|
+  = render :partial => 'cms/content/file_attachment', :locals => {:file_attachment => file_attachment}
