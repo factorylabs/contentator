@@ -10,3 +10,4 @@ db/schema.rb
 tmp/restart.txt
 pkg
 public/images/photos
+public/images/files
