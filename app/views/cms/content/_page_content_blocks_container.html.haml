@@ -1,6 +1,6 @@
 #new_page_content_block
 
-- form_tag sort_cms_admin_page_content_blocks_path, :id => 'sort_form', :onsubmit => 'getPcbInputs();' do
+- form_tag sort_cms_admin_page_content_blocks_path, :id => 'sort_form', :onsubmit => 'getPositionInputs();' do
   = submit_tag t('form_global.sort')
   = hidden_field_tag :page_id, @page.id
   %br 

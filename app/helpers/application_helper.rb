@@ -21,9 +21,9 @@ module ApplicationHelper
     link_to_remote(image_tag('icons/delete.png', :class => 'delete_button'), :update => update, :url =>  url, :method => :delete, :confirm => t('form_global.delete_warning'))
   end
   
-  def sort_field(id, pos)
+  def sort_field(field_name, pos)
     return unless current_user
-    text_field_tag "page_content_blocks[#{id}]", pos, :class => 'position_text_box'
+    text_field_tag field_name, pos, :class => 'position_text_box'
   end
 
 end

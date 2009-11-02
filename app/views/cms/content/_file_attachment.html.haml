@@ -2,6 +2,6 @@
 %a{:name => id}
 %div{:class => 'file_attachment', :id => "file_attachment_#{id}"}
   = delete_link("file_attachment_#{id}", "#{cms_admin_file_attachment_path(id, 'page_id' => @page.id)}")
-  = sort_field(id,file_attachment.position)
+  = sort_field("file_attachments[#{id}]",file_attachment.position)
   .clear
   = image_tag file_attachment.file.url, :class => 'content_image' if file_attachment.file.file?
