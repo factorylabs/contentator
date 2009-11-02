@@ -12,9 +12,11 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../app/controllers/cms/admin/admin_controller.rb', 'app/controllers/cms/admin/admin_controller.rb'
       m.file '../../../app/controllers/cms/admin/page_content_blocks_controller.rb', 'app/controllers/cms/admin/page_content_blocks_controller.rb'
       m.file '../../../app/controllers/cms/admin/pages_controller.rb', 'app/controllers/cms/admin/pages_controller.rb'
+      m.file '../../../app/controllers/cms/admin/file_attachments_controller.rb', 'app/controllers/cms/admin/file_attachments_controller.rb'
       m.file '../../../app/helpers/application_helper.rb', 'app/helpers/application_helper.rb', :collision => :force
       m.file '../../../app/helpers/cms/admin/pages_helper.rb', 'app/helpers/cms/admin/pages_helper.rb'
       m.file '../../../app/models/page.rb', 'app/models/page.rb'
+      m.file '../../../app/models/ile_attachment.rb', 'app/models/ile_attachment.rb'
       m.file '../../../app/models/page_content_block.rb', 'app/models/page_content_block.rb'
 
       m.directory('app/views/cms/content')      
@@ -33,6 +35,9 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../app/views/cms/content/_page_content_blocks_container.html.haml', 'app/views/cms/content/_page_content_blocks_container.html.haml'
       m.file '../../../app/views/cms/content/content.html.haml', 'app/views/cms/content/content.html.haml'
       m.file '../../../app/views/cms/content/home.html.haml', 'app/views/cms/content/home.html.haml'
+      m.file '../../../app/views/cms/content/gallery.html.haml', 'app/views/cms/content/gallery.html.haml'
+      m.file '../../../app/views/cms/content/_file_attachment.html.haml', 'app/views/cms/content/_file_attachment.html.haml'
+      m.file '../../../app/views/cms/content/_file_attachments_container.html.haml', 'app/views/cms/content/_file_attachments_container.html.haml'
       m.file '../../../app/views/layouts/application.html.haml', 'app/views/layouts/application.html.haml'
       m.file '../../../app/views/layouts/cms/admin/application.html.haml', 'app/views/layouts/cms/admin/application.html.haml'
       
@@ -41,6 +46,7 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../db/migrate/20091002165818_create_pages.rb', 'db/migrate/20091002165818_create_pages.rb'
       m.file '../../../db/migrate/20091002211930_create_home_page.rb', 'db/migrate/20091002211930_create_home_page.rb'
       m.file '../../../db/migrate/20091007222703_create_page_content_blocks.rb', 'db/migrate/20091007222703_create_page_content_blocks.rb'
+      m.file '../../../db/migrate/20091029204950_create_file_attachments.rb.rb', 'db/migrate/20091029204950_create_file_attachments.rb.rb'
       
       m.directory('public/images/admin_standard')      
       m.directory('public/images/icons')      

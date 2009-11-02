@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Factory Design Labs"]
-  s.date = %q{2009-10-28}
+  s.date = %q{2009-11-02}
   s.description = %q{A lightweight cms that focuses on in place editing.}
   s.email = %q{interactive@factorylabs.com}
   s.extra_rdoc_files = [
@@ -21,22 +21,28 @@ Gem::Specification.new do |s|
      "VERSION",
      "app/controllers/application_controller.rb",
      "app/controllers/cms/admin/admin_controller.rb",
+     "app/controllers/cms/admin/file_attachments_controller.rb",
      "app/controllers/cms/admin/page_content_blocks_controller.rb",
      "app/controllers/cms/admin/pages_controller.rb",
      "app/controllers/cms/content_controller.rb",
      "app/helpers/application_helper.rb",
      "app/helpers/cms/admin/pages_helper.rb",
+     "app/models/file_attachment.rb",
      "app/models/page.rb",
      "app/models/page_content_block.rb",
      "app/views/cms/admin/_admin_toolbar.html.haml",
+     "app/views/cms/admin/file_attachments/_form.html.haml",
      "app/views/cms/admin/page_content_blocks/_form.html.haml",
      "app/views/cms/admin/pages/_form.html.haml",
      "app/views/cms/admin/pages/edit.html.haml",
      "app/views/cms/admin/pages/index.html.haml",
      "app/views/cms/admin/pages/new.html.haml",
+     "app/views/cms/content/_file_attachment.html.haml",
+     "app/views/cms/content/_file_attachments_container.html.haml",
      "app/views/cms/content/_page_content_block.html.haml",
      "app/views/cms/content/_page_content_blocks_container.html.haml",
      "app/views/cms/content/content.html.haml",
+     "app/views/cms/content/gallery.html.haml",
      "app/views/cms/content/home.html.haml",
      "app/views/layouts/application.html.haml",
      "app/views/layouts/cms/admin/application.html.haml",
@@ -59,6 +65,7 @@ Gem::Specification.new do |s|
      "db/migrate/20091002165818_create_pages.rb",
      "db/migrate/20091002211930_create_home_page.rb",
      "db/migrate/20091007222703_create_page_content_blocks.rb",
+     "db/migrate/20091029204950_create_file_attachments.rb",
      "lib/contentator.rb",
      "lib/generators/content/content_generator.rb",
      "lib/generators/content/templates/container.rb",
@@ -103,7 +110,6 @@ Gem::Specification.new do |s|
      "public/images/icons/edit.png",
      "public/images/icons/folder.png",
      "public/images/icons/move.png",
-     "public/images/photos/16/original_racecar.jpg",
      "public/images/rails.png",
      "public/robots.txt",
      "public/stylesheets/admin_standard.css",
@@ -111,11 +117,13 @@ Gem::Specification.new do |s|
      "rails_generators/contentator_files/contentator_files_generator.rb",
      "rails_generators/contentator_files/templates/application.rb",
      "test/factories.rb",
+     "test/functional/cms/admin/file_attachment_controller_test.rb",
      "test/functional/cms/admin/page_content_block_controller_test.rb",
      "test/functional/cms/admin/pages_controller_test.rb",
      "test/functional/cms/content_controller_test.rb",
      "test/performance/browsing_test.rb",
      "test/test_helper.rb",
+     "test/unit/file_attachment_test.rb",
      "test/unit/page_content_block_test.rb",
      "test/unit/page_test.rb"
   ]
@@ -126,11 +134,13 @@ Gem::Specification.new do |s|
   s.summary = %q{A lightweight cms that focuses on in place editing.}
   s.test_files = [
     "test/factories.rb",
+     "test/functional/cms/admin/file_attachment_controller_test.rb",
      "test/functional/cms/admin/page_content_block_controller_test.rb",
      "test/functional/cms/admin/pages_controller_test.rb",
      "test/functional/cms/content_controller_test.rb",
      "test/performance/browsing_test.rb",
      "test/test_helper.rb",
+     "test/unit/file_attachment_test.rb",
      "test/unit/page_content_block_test.rb",
      "test/unit/page_test.rb"
   ]
