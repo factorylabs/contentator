@@ -89,10 +89,10 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../test/test_helper.rb', 'test/test_helper.rb', :collision => :force
 
       m.directory('test/functional/cms/admin')      
-      m.file '../../../test/functional/cms/admin/page_content_block_controller_test.rb', 'test/functional/cms/admin/page_content_block_controller_test.rb'
+      m.file '../../../test/functional/cms/admin/page_content_blocks_controller_test.rb', 'test/functional/cms/admin/page_content_blocks_controller_test.rb'
       m.file '../../../test/functional/cms/admin/pages_controller_test.rb', 'test/functional/cms/admin/pages_controller_test.rb'
-      m.file '../../../test/functional/cms/admin/pages_controller_test.rb', 'test/functional/cms/admin/pages_controller_test.rb'
-      m.file '../../../test/functional/cms/file_attachments_controller_test.rb', 'test/functional/cms/file_attachments_controller_test.rb'
+      m.file '../../../test/functional/cms/admin/file_attachments_controller_test.rb', 'test/functional/cms/admin/file_attachments_controller_test.rb'
+      m.file '../../../test/functional/cms/content_controller_test.rb', 'test/functional/cms/content_controller_test.rb'
       
       m.file '../../../test/unit/page_content_block_test.rb', 'test/unit/page_content_block_test.rb'
       m.file '../../../test/unit/page_test.rb', 'test/unit/page_test.rb'
