@@ -117,7 +117,7 @@ Gem::Specification.new do |s|
      "rails_generators/contentator_files/contentator_files_generator.rb",
      "rails_generators/contentator_files/templates/application.rb",
      "test/factories.rb",
-     "test/functional/cms/admin/file_attachments_controllers_test.rb",
+     "test/functional/cms/admin/file_attachments_controller_test.rb",
      "test/functional/cms/admin/page_content_blocks_controller_test.rb",
      "test/functional/cms/admin/pages_controller_test.rb",
      "test/functional/cms/content_controller_test.rb",
@@ -134,7 +134,7 @@ Gem::Specification.new do |s|
   s.summary = %q{A lightweight cms that focuses on in place editing.}
   s.test_files = [
     "test/factories.rb",
-     "test/functional/cms/admin/file_attachments_controllers_test.rb",
+     "test/functional/cms/admin/file_attachments_controller_test.rb",
      "test/functional/cms/admin/page_content_blocks_controller_test.rb",
      "test/functional/cms/admin/pages_controller_test.rb",
      "test/functional/cms/content_controller_test.rb",
