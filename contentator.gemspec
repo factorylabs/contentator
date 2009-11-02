@@ -78,6 +78,8 @@ Gem::Specification.new do |s|
      "lib/generators/content/templates/model.rb",
      "lib/generators/content/templates/unit_test.rb",
      "lib/generators/content/templates/view.rb.rb",
+     "lib/generators/contentator_files/contentator_files_generator.rb",
+     "lib/generators/contentator_files/templates/application.rb",
      "lib/template.rb",
      "public/404.html",
      "public/422.html",
