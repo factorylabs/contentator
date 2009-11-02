@@ -114,8 +114,6 @@ Gem::Specification.new do |s|
      "public/robots.txt",
      "public/stylesheets/admin_standard.css",
      "public/stylesheets/application.css",
-     "rails_generators/contentator_files/contentator_files_generator.rb",
-     "rails_generators/contentator_files/templates/application.rb",
      "test/factories.rb",
      "test/functional/cms/admin/file_attachment_controller_test.rb",
      "test/functional/cms/admin/page_content_block_controller_test.rb",

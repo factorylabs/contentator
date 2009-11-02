@@ -16,8 +16,8 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../app/helpers/application_helper.rb', 'app/helpers/application_helper.rb', :collision => :force
       m.file '../../../app/helpers/cms/admin/pages_helper.rb', 'app/helpers/cms/admin/pages_helper.rb'
       m.file '../../../app/models/page.rb', 'app/models/page.rb'
-      m.file '../../../app/models/ile_attachment.rb', 'app/models/ile_attachment.rb'
       m.file '../../../app/models/page_content_block.rb', 'app/models/page_content_block.rb'
+      m.file '../../../app/models/file_attachment.rb', 'app/models/file_attachment.rb'
 
       m.directory('app/views/cms/content')      
       m.directory('app/views/cms/admin')      
@@ -46,7 +46,7 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../db/migrate/20091002165818_create_pages.rb', 'db/migrate/20091002165818_create_pages.rb'
       m.file '../../../db/migrate/20091002211930_create_home_page.rb', 'db/migrate/20091002211930_create_home_page.rb'
       m.file '../../../db/migrate/20091007222703_create_page_content_blocks.rb', 'db/migrate/20091007222703_create_page_content_blocks.rb'
-      m.file '../../../db/migrate/20091029204950_create_file_attachments.rb.rb', 'db/migrate/20091029204950_create_file_attachments.rb.rb'
+      m.file '../../../db/migrate/20091029204950_create_file_attachments.rb', 'db/migrate/20091029204950_create_file_attachments.rb'
       
       m.directory('public/images/admin_standard')      
       m.directory('public/images/icons')      
@@ -91,10 +91,12 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.directory('test/functional/cms/admin')      
       m.file '../../../test/functional/cms/admin/page_content_block_controller_test.rb', 'test/functional/cms/admin/page_content_block_controller_test.rb'
       m.file '../../../test/functional/cms/admin/pages_controller_test.rb', 'test/functional/cms/admin/pages_controller_test.rb'
-      m.file '../../../test/functional/cms/content_controller_test.rb', 'test/functional/cms/content_controller_test.rb'
+      m.file '../../../test/functional/cms/admin/pages_controller_test.rb', 'test/functional/cms/admin/pages_controller_test.rb'
+      m.file '../../../test/functional/cms/file_attachments_controller_test.rb', 'test/functional/cms/file_attachments_controller_test.rb'
       
       m.file '../../../test/unit/page_content_block_test.rb', 'test/unit/page_content_block_test.rb'
       m.file '../../../test/unit/page_test.rb', 'test/unit/page_test.rb'
+      m.file '../../../test/unit/file_attachment_test.rb', 'test/unit/file_attachment_test.rb'
 
       m.file '../../../config/geminstaller.yml', 'config/geminstaller.yml'
       m.file '../../../config/geminstaller.local.yml', 'config/geminstaller.local.yml'
