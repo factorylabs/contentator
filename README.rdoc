@@ -4,8 +4,7 @@ Contentator is designed to be a flexible, light cms.  Hopefully it won't get in 
 
 == Install
 
-    todo: add to gemcutter
-    sudo gem install factorylabs-contentator --source=http://gems.github.com
+For now build and install the gem with jeweler.  It will be on gemcutter eventually
 
 == Usage
 
@@ -43,4 +42,4 @@ There is support for using locale subdomains already.  See set_locale in the app
     127.0.0.1       de.localhost
     
 The locale will automatically be set based on the subdomain.    
-    
+
