@@ -137,17 +137,17 @@ class Cms::Admin::PageContentBlocksControllerTest < ActionController::TestCase
 
   context "on POST to :sort" do
     setup do
-      post :sort, :page_id => @page.id, :page_content_blocks => {@page_content_block.id => '4', @page_content_block2.id => '1', @page_content_block3.id => '2'}
+      post :sort, :page_id => @page.id, :page_content_block => [ @page_content_block3.id, @page_content_block.id, @page_content_block2.id ]
     end
 
     should "sort page content blocks" do
-      assert_equal 4, @page_content_block.reload.position
-      assert_equal 1, @page_content_block2.reload.position
-      assert_equal 2, @page_content_block3.reload.position
+      assert_equal 1, @page_content_block.reload.position
+      assert_equal 2, @page_content_block2.reload.position
+      assert_equal 0, @page_content_block3.reload.position
     end
     
     should_assign_to :page
-    should_redirect_to('content path') { content_path(@page.path) }
+    should_render_without_layout()   
   end
 
 end

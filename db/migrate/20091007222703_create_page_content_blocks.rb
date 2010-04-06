@@ -9,6 +9,7 @@ class CreatePageContentBlocks < ActiveRecord::Migration
       t.string        :photo_file_name
       t.string        :photo_content_type
       t.integer       :photo_file_size
+      t.string        :size
       t.timestamps
     end
     PageContentBlock.create_translation_table! :title => :string, :text => :text

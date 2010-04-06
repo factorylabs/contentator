@@ -64,13 +64,14 @@ class Cms::Admin::PageContentBlocksController < ApplicationController
 
   def sort
     @page = Page.find(params[:page_id])
-
-    if params[:page_content_blocks]
-      params[:page_content_blocks].each do |k,v|
-        page_content_block = @page.page_content_blocks.find(k)
-        page_content_block.update_attributes(:position => v)
+    if params[:page_content_block]
+      position = 0
+      params[:page_content_block].each do |id|
+        page_content_block = @page.page_content_blocks.find(id)
+        page_content_block.update_attributes(:position => position)
+        position += 1
       end
     end
-    redirect_to content_path(@page.path) 
+    render :nothing => true, :layout => false
   end
 end
