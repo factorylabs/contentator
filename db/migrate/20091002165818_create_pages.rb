@@ -6,7 +6,7 @@ class CreatePages < ActiveRecord::Migration
       t.string      :slug, :limit => 100
       t.string      :path
       t.string      :template_name
-      t.integer     :position
+      t.integer     :position, :default => 0
       t.integer     :parent_id
       t.boolean     :visible
       t.boolean     :in_navigation
