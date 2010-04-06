@@ -4,6 +4,7 @@ class Cms::ContentController < ApplicationController
     @page = Page.find_from_path(params[:path])
 
     if @page
+      send @page.template_name if @page
       render :action => @page.template_name
     else
       respond_to do |format|
