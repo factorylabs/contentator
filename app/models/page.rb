@@ -29,7 +29,7 @@ class Page < ActiveRecord::Base
   end
 
   def self.home_page
-    Page.find(1)
+    Page.find_by_slug('home')
   end  
 
   def destroy
@@ -46,13 +46,17 @@ class Page < ActiveRecord::Base
 
   protected
   def check_parent
-    return if self.id == 1
+    if self == Page.home_page
+      self.parent_id = nil
+      return
+    end
     self.parent_id = 1 if self.parent_id.nil?
   end
   
   #Creates a URI path based on the Page tree
   def create_full_path
-    return if self.id == 1
+    return if self == Page.home_page
+
     self.parent.reload if self.parent
     if parent_node = self.parent
       # Build URI Path

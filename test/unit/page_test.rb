@@ -6,6 +6,7 @@ class PageTest < ActiveSupport::TestCase
   def setup
     @home_page = Factory(:page, :slug => 'home', :path => 'home', :template_name => 'home', :parent_id => nil, :position => 34)
     Page.stubs(:home_page).returns(@home_page)
+    @home_page.parent_id = nil
     @page = Factory(:page)
     @child = Factory(:page, :title => 'Child', :parent_id => @page.id, :visible => false, :position => 16)
   end
@@ -83,6 +84,14 @@ class PageTest < ActiveSupport::TestCase
 
   should "be ordered" do
     assert_equal [@child, @page, @home_page], Page.ordered.all
+  end
+
+  should "not set parent_id of home page" do
+    assert_equal nil, @home_page.parent_id
+    @home_page.save
+    assert_equal nil, @home_page.parent_id
+    @home_page.update_attributes(:parent_id => 2)
+    assert_equal nil, @home_page.parent_id
   end
   
   should "not allow parent_id to be null" do
