@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Factory Design Labs"]
-  s.date = %q{2009-11-02}
+  s.date = %q{2010-04-06}
   s.description = %q{A lightweight cms that focuses on in place editing.}
   s.email = %q{interactive@factorylabs.com}
   s.extra_rdoc_files = [
@@ -77,7 +77,6 @@ Gem::Specification.new do |s|
      "lib/generators/content/templates/migration.rb",
      "lib/generators/content/templates/model.rb",
      "lib/generators/content/templates/unit_test.rb",
-     "lib/generators/content/templates/view.rb.rb",
      "lib/template.rb",
      "public/404.html",
      "public/422.html",
@@ -130,7 +129,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/factorylabs/contentator}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.4}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{A lightweight cms that focuses on in place editing.}
   s.test_files = [
     "test/factories.rb",

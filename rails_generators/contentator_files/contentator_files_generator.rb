@@ -104,6 +104,24 @@ class ContentatorFilesGenerator < Rails::Generator::Base
       m.file '../../../config/environment.rb', 'config/environment.rb', :collision => :force
       m.file '../../../config/locales/en.yml', 'config/locales/en.yml', :collision => :force
       m.file '../../../config/locales/de.yml', 'config/locales/de.yml'
+
+      # copy custom content generator
+      m.directory('lib/generators')      
+      m.directory('lib/generators/content')      
+      m.directory('lib/generators/content/templates')      
+
+      m.file '../../../lib/generators/content/content_generator.rb', 'lib/generators/content/content_generator.rb'
+      m.file '../../../lib/generators/content/templates/container.rb', 'lib/generators/content/templates/container.rb'
+      m.file '../../../lib/generators/content/templates/controller.rb', 'lib/generators/content/templates/controller.rb'
+      m.file '../../../lib/generators/content/templates/factories.rb', 'lib/generators/content/templates/factories.rb'
+      m.file '../../../lib/generators/content/templates/form.rb', 'lib/generators/content/templates/form.rb'
+      m.file '../../../lib/generators/content/templates/functional_test.rb', 'lib/generators/content/templates/functional_test.rb'
+      m.file '../../../lib/generators/content/templates/item.rb', 'lib/generators/content/templates/item.rb'
+      m.file '../../../lib/generators/content/templates/migration.rb', 'lib/generators/content/templates/migration.rb'
+      m.file '../../../lib/generators/content/templates/model.rb', 'lib/generators/content/templates/model.rb'
+      m.file '../../../lib/generators/content/templates/unit_test.rb', 'lib/generators/content/templates/unit_test.rb'
+      m.file '../../../lib/generators/content/templates/view.rb', 'lib/generators/content/templates/view.rb'
+
     end
   end  
 end
