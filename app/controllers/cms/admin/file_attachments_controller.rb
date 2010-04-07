@@ -37,17 +37,17 @@ class Cms::Admin::FileAttachmentsController < Cms::Admin::AdminController
     end  
   end
 
-
   def sort
     @page = Page.find(params[:page_id])
-
-    if params[:file_attachments]
-      params[:file_attachments].each do |k,v|
-        @file_attachment = FileAttachment.find(k)
-        @file_attachment.update_attributes(:position => v)
+    if params[:file_attachment]
+      position = 0
+      params[:file_attachment].each do |id|
+        file_attachment = FileAttachment.find(id)
+        file_attachment.update_attributes(:position => position)
+        position += 1
       end
     end
-    redirect_to content_path(@page.path) 
+    render :nothing => true, :layout => false
   end
 
 end

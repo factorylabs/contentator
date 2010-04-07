@@ -96,19 +96,24 @@ class Cms::Admin::FileAttachmentsControllerTest < ActionController::TestCase
     end
 
     context "on POST to :sort" do
+      should "sort file_attachment content blocks" do
+        assert_equal 1, @file_attachment.position
+        assert_equal 17, @file_attachment2.position
+        assert_equal 3, @file_attachment3.position
+      end
+
       setup do
-        post :sort, :page_id => @page.id, :file_attachments => {@file_attachment.id => '4', @file_attachment2.id => '1', @file_attachment3.id => '2'}
+        post :sort, :page_id => @page.id, :file_attachment => [@file_attachment3.id, @file_attachment.id, @file_attachment2.id ]
       end
     
       should "sort file_attachment content blocks" do
-        assert_equal 4, @file_attachment.reload.position
-        assert_equal 1, @file_attachment2.reload.position
-        assert_equal 2, @file_attachment3.reload.position
+        assert_equal 1, @file_attachment.reload.position
+        assert_equal 2, @file_attachment2.reload.position
+        assert_equal 0, @file_attachment3.reload.position
       end
     
       should_assign_to :page
-      should_assign_to :file_attachment
-      should_redirect_to('content path') { content_path(@page.path) }
+      should_render_without_layout()   
     end
   end  
 end

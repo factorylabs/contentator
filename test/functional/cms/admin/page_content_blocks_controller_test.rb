@@ -136,6 +136,12 @@ class Cms::Admin::PageContentBlocksControllerTest < ActionController::TestCase
   end
 
   context "on POST to :sort" do
+    should "sort page content blocks" do
+      assert_equal 1, @page_content_block.position
+      assert_equal 17, @page_content_block2.position
+      assert_equal 3, @page_content_block3.position
+    end
+
     setup do
       post :sort, :page_id => @page.id, :page_content_block => [ @page_content_block3.id, @page_content_block.id, @page_content_block2.id ]
     end
