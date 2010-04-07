@@ -1,6 +1,6 @@
 - id = file_attachment.id
 %a{:name => id}
-%div{:class => 'file_attachment', :id => "file_attachment_#{id}"}
+%div{:id => "file_attachment_#{id}", :class => 'box file_attachment'}
   - if current_user
     .contentator-toolbar
       = delete_link("file_attachment_#{id}", "#{cms_admin_file_attachment_path(id, 'page_id' => @page.id)}")
